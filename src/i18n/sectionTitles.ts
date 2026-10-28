@@ -51,9 +51,13 @@ const ZH_TO_EN: Record<string, string> = {
   "cluster / sentinel / tls": "cluster / sentinel / tls",
   RedissonConfig: "RedissonConfig",
   "启动、预热与进程守卫": "Startup, warmup & process guards",
+  "Filter 与 Interceptor": "Filter and Interceptor",
+  "AOP 自定义装饰器": "AOP custom decorators",
   扫描与中间件: "Scan & middleware",
   路由注册: "Route registration",
   鉴权装饰器: "Auth decorators",
+  "@RequestBody / Query / Header / Cookie / Path / Form":
+    "@RequestBody / Query / Header / Cookie / Path / Form",
   "@RequestBody / Query / Header / Cookie / Path":
     "@RequestBody / Query / Header / Cookie / Path",
   "@Value 注入 YAML": "@Value YAML injection",

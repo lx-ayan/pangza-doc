@@ -92,7 +92,7 @@ export function Home() {
               <Button
                 size="large"
                 icon={<GithubOutlined />}
-                href="https://github.com/lx-ayan/pangza-admin-express"
+                href="https://github.com/lx-ayan/pangza"
                 target="_blank"
               >
                 {t("header.github")}

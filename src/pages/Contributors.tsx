@@ -24,11 +24,8 @@ export function Contributors() {
         <Title level={2}>{t("contributors.title")}</Title>
         <Paragraph type="secondary">
           {t("contributors.desc")}{" "}
-          <ALink
-            href="https://github.com/lx-ayan/pangza-admin-express"
-            target="_blank"
-          >
-            pangza-admin-express
+          <ALink href="https://github.com/lx-ayan/pangza" target="_blank">
+            pangza
           </ALink>
           .
         </Paragraph>

@@ -12,13 +12,13 @@ export const applicationApi: DocPage = {
   key: "Application-api",
   title: "Application Â· API",
   description:
-    "Express application facade (@pangza/core): scans business modules, registers routes, and runs auth / rate-limit / validation / logging pipelines with a unified response wrapper. IoC (Container / @Service, â€¦) also lives under Application in this package. Typical: Application.registry(...).scan(...).start().",
+    "Express application facade (@pangza/core): scans business modules, registers routes, and runs auth / rate-limit / validation / logging pipelines with a unified response wrapper. IoC (Container / @Service, â€? also lives under Application in this package. Typical: Application.registry(...).scan(...).start().",
   sections: [
     {
       id: "overview",
       title: "Overview",
       content:
-        "Controller decorators call registerController automatically when the class loads. The start() pipeline: installProcessErrorGuards â†’ loadControllers â†’ routes â†’ listen â†’ warmupConnections + runApplicationInits. On shutdown, SIGINT/SIGTERM run ApplicationDestroys in reverse order.",
+        "Controller decorators call registerController automatically when the class loads. The start() pipeline: installProcessErrorGuards â†?loadControllers â†?mountFilters â†?routes â†?listen â†?warmupConnections + runApplicationInits. On shutdown, SIGINT/SIGTERM run ApplicationDestroys in reverse order.",
     },
     {
       id: "lifecycle",
@@ -64,6 +64,25 @@ export const applicationApi: DocPage = {
             "Pre-send interceptor. Default still wraps ResponseData; ctx.wrap=false sends raw body; ctx.handled=true means you already wrote the response.",
         },
         {
+          name: "Application.addFilter / @WebFilter",
+          signature:
+            "static addFilter(filter, options?): typeof Application",
+          description:
+            "Servlet-style Filter: mounted by order before routes on start. await chain.doFilter for before/after. options: order / urlPatterns / excludePatterns.",
+        },
+        {
+          name: "Application.addInterceptor / @Interceptor",
+          signature:
+            "static addInterceptor(interceptor, options?): typeof Application",
+          description:
+            "Spring MVC HandlerInterceptor: preHandle (false aborts) / postHandle (may replace data) / afterCompletion (finally, reverse order). options: order / include / exclude.",
+        },
+        {
+          name: "Filter / FilterChain / HandlerInterceptor",
+          description:
+            "Interfaces. Path matching matches Auth ignore (/**, /*, prefix *). Scan prefers filter(s) and interceptor(s) dirs.",
+        },
+        {
           name: "ApplicationInit",
           signature: "interface { init(): void | Promise<void> }",
           description:
@@ -83,7 +102,7 @@ export const applicationApi: DocPage = {
         {
           name: "registerController / getScanRoots / loadControllers",
           description:
-            "Decorator registers controller metadata; get scan roots; load business modules by convention (entity â†’ mapper â†’ service â†’ controller, etc.).",
+            "Decorator registers controller metadata; get scan roots; load business modules by convention (entity â†?mapper â†?service â†?controller, etc.).",
         },
       ],
       decoratorExample: `@Component()
@@ -107,13 +126,167 @@ Application
   .registry(EnableRedis())
   .registry(Auth({ redis: Redis }))
   .registry(Log({ writer }))
-  .scan("src")
+  .scan(__dirname)
   .start();
 
 Application.addResponseInterceptor(async (ctx) => {
   ctx.wrap = false;
   return { code: 0, result: ctx.data };
-});`,
+});
+
+// start: installProcessErrorGuards â†?loadControllers â†?mountFilters â†?routes
+// listen â†?warmupConnections + runApplicationInits`,
+    },
+    {
+      id: "filter-interceptor",
+      title: "Filter and Interceptor",
+      content:
+        "Spring Bootâ€“aligned: Filters wrap outside the router (Dispatcher); HandlerInterceptors run after a handler is mapped.\nPipeline: registry middleware â†?Filter chain â†?route auth/guards â†?preHandle â†?RequestInterceptor â†?Controller â†?postHandle â†?ResponseInterceptor â†?write â†?afterCompletion.\nDecorators register on class load; or use Application.addFilter / addInterceptor.",
+      apis: [
+        {
+          name: "@WebFilter",
+          signature: "@WebFilter({ order?, urlPatterns?, excludePatterns? })",
+          description: "Class decorator; implement Filter.doFilter.",
+        },
+        {
+          name: "@Interceptor",
+          signature: "@Interceptor({ order?, include?, exclude? })",
+          description:
+            "Class decorator; implement any of preHandle / postHandle / afterCompletion.",
+        },
+        {
+          name: "Filter.doFilter",
+          signature: "doFilter(req, res, chain): void | Promise<void>",
+          description:
+            "Skip chain to short-circuit (write the response yourself). After await chain.doFilter you can run cleanup (waits for response finish).",
+        },
+        {
+          name: "HandlerInterceptor.preHandle",
+          signature:
+            "preHandle(req, res, handler): boolean | void | Promise<...>",
+          description:
+            "Return false to skip the Controller (you may res.send yourself).",
+        },
+      ],
+      decoratorExample: `import {
+  WebFilter, Interceptor,
+  type Filter, type FilterChain, type HandlerInterceptor, type HandlerInfo,
+} from "@pangza/core";
+import type { Request, Response } from "express";
+
+@WebFilter({ urlPatterns: ["/api/**"], order: 1 })
+class TimingFilter implements Filter {
+  async doFilter(req: Request, res: Response, chain: FilterChain) {
+    const t = Date.now();
+    await chain.doFilter(req, res);
+    console.log(req.method, req.path, Date.now() - t);
+  }
+}
+
+@Interceptor({ include: ["/api/**"], exclude: ["/api/pub/**"], order: 0 })
+class LogInterceptor implements HandlerInterceptor {
+  preHandle(req: Request, _res: Response, handler: HandlerInfo) {
+    console.log("â†?, handler.controllerName, handler.handlerName);
+    return true;
+  }
+  afterCompletion(_req: Request, _res: Response, _h: HandlerInfo, err?: unknown) {
+    if (err) console.error(err);
+  }
+}`,
+      functionalExample: `Application.addFilter(
+  {
+    async doFilter(req, res, chain) {
+      res.setHeader("X-Trace", "1");
+      await chain.doFilter(req, res);
+    },
+  },
+  { urlPatterns: ["/**"], order: 0 },
+);
+
+Application.addInterceptor(
+  {
+    preHandle(req) {
+      console.log(req.path);
+      return true;
+    },
+  },
+  { include: ["/api/**"] },
+);`,
+    },
+    {
+      id: "aop",
+      title: "AOP custom decorators",
+      content:
+        "Spring-style method AOP (Around / Before / After*). Custom decorators weave the method call chain after auth, rate-limit, and @Validate, around the business method. Inside Controllers, getMethodInvocationContext() exposes req/res.\nLower order = outer. Composes with @Cacheable / @Transactional (descriptor wrap) and runs after route-metadata features like @Log / @RateLimiter.",
+      apis: [
+        {
+          name: "createAroundDecorator / Around",
+          signature:
+            "createAroundDecorator(advice, options?): MethodDecorator",
+          description:
+            "Preferred factory for custom annotations. Call inv.proceed(); you may mutate inv.args.",
+        },
+        {
+          name: "Before / After / AfterReturning / AfterThrowing",
+          description: "Sugar; folded into the Around chain.",
+        },
+        {
+          name: "markAdvice + registerAroundAdvice",
+          signature:
+            "markAdvice(key) / registerAroundAdvice(key, advice, options?)",
+          description:
+            "Like @Around(\"@annotation\"): mark methods, register advice centrally; order-independent.",
+        },
+        {
+          name: "getMethodInvocationContext",
+          signature: "getMethodInvocationContext(): MethodInvocationContext | undefined",
+          description:
+            "Inside the HTTP pipeline: req/res/option/path; undefined for plain Service calls.",
+        },
+        {
+          name: "MethodInvocation",
+          description: "target / methodName / args / context / proceed().",
+        },
+      ],
+      decoratorExample: `import {
+  createAroundDecorator, markAdvice, registerAroundAdvice,
+  getMethodInvocationContext, PostMapping, RequestBody,
+} from "@pangza/core";
+
+export const Audit = (title: string) =>
+  createAroundDecorator(async (inv) => {
+    const ctx = getMethodInvocationContext();
+    console.log(title, inv.methodName, ctx?.req?.path);
+    return inv.proceed();
+  }, { order: 100 });
+
+@PostMapping("/save")
+@Audit("save user")
+save(@RequestBody() body: User) {
+  return body;
+}
+
+const SLOW = Symbol("slow");
+export const SlowLog = () => markAdvice(SLOW);
+
+registerAroundAdvice(SLOW, async (inv) => {
+  const t = Date.now();
+  try {
+    return await inv.proceed();
+  } finally {
+    console.log(inv.methodName, Date.now() - t);
+  }
+}, { order: 50 });`,
+      functionalExample: `import { Around, Before } from "@pangza/core";
+
+@Around(async (inv) => {
+  inv.args[0] = { ...(inv.args[0] as object), traced: true };
+  return inv.proceed();
+}, { order: 10 })
+@Before(async (inv) => {
+  console.log("before", inv.methodName);
+})
+async create(dto: CreateDto) { return dto; }`,
     },
     {
       id: "scan-registry",
@@ -152,7 +325,7 @@ Application.addResponseInterceptor(async (ctx) => {
           signature:
             "static static(url | urls | map, rootDir?): typeof Application",
           description:
-            "Mount static assets. URL may match the folder name, or map URL â†’ disk dir; or use yaml upload.path / upload.urlPrefix with express.static.",
+            "Mount static assets. URL may match the folder name, or map URL â†?disk dir; or use yaml upload.path / upload.urlPrefix with express.static.",
           params: [
             {
               name: "urlOrMap",
@@ -180,7 +353,7 @@ Application.addResponseInterceptor(async (ctx) => {
 import express from "express";
 
 Application
-  .scan("src")
+  .scan(__dirname)
   .registry(express.json())
   .static("public")
   .static("/files", "upload")
@@ -199,7 +372,7 @@ app.use(UPLOAD_URL_PREFIX, express.static(UPLOAD_PATH));`,
           signature:
             "static GET(path, callback, option?: RouteOption): typeof Application",
           description:
-            "Functional route registration. Third arg option is RouteOption â€” table expands all fields (auth / log / rateLimit / â€¦).",
+            "Functional route registration. Third arg option is RouteOption â€?table expands all fields (auth / log / rateLimit / â€?.",
           params: [
             { name: "path", type: "string", required: true, description: "Route path" },
             {
@@ -235,7 +408,7 @@ app.use(UPLOAD_URL_PREFIX, express.static(UPLOAD_PATH));`,
           name: "@GetMapping / @PostMapping / @PutMapping / @DeleteMapping",
           signature: "@GetMapping(path?: string, option?: RouteOption)",
           description:
-            "Registers an HTTP method and sub-path. option is the same RouteOption as Application.GET â€” fields below.",
+            "Registers an HTTP method and sub-path. option is the same RouteOption as Application.GET â€?fields below.",
           params: [
             {
               name: "path",
@@ -306,9 +479,9 @@ admin() {}`,
     },
     {
       id: "params",
-      title: "@RequestBody / Query / Header / Cookie / Path",
+      title: "@RequestBody / Query / Header / Cookie / Path / Form",
       content:
-        "Parameter decorators write MethodParamMeta by parameter index. All take no args (except optional index on @RequestPath). With no parameter decorators, the callback receives the whole req by default.",
+        "Parameter decorators write MethodParamMeta by parameter index. All take no args except optional args on @RequestPath / @RequestForm. With no parameter decorators, the callback receives the whole req by default.\nForms need `registry(urlencoded({ extended: true }))`; multipart files need multer (or similar).",
       apis: [
         {
           name: "@RequestBody",
@@ -346,9 +519,22 @@ admin() {}`,
           ],
         },
         {
+          name: "@RequestForm",
+          signature: "@RequestForm(name?: string)",
+          description:
+            "Injects form data (urlencoded / multipart fields on req.body). No args: whole object, plus req.file/files when present. @RequestForm(\"name\") takes one field.",
+          params: [
+            {
+              name: "name",
+              type: "string",
+              description: "Form field name; omit to inject the whole form object",
+            },
+          ],
+        },
+        {
           name: "ParamType",
           description:
-            "Enum: BODY / QUERY / PARAMS / HEADER / COOKIE / PATH. Legacy single-param option.paramType or decorator writes MethodParamMeta.",
+            "Enum: BODY / QUERY / PARAMS / HEADER / COOKIE / PATH / FORM. Legacy single-param option.paramType or decorator writes MethodParamMeta.",
         },
       ],
       decoratorExample: `@PostMapping("/create")
@@ -360,6 +546,14 @@ create(
   return this.userService.insert(body);
 }
 
+@PostMapping("/login")
+login(@RequestForm() form: { username: string; password: string }) {
+  return form.username;
+}
+
+@PostMapping("/upload")
+upload(@RequestForm("title") title: string) {}
+
 @GetMapping("/search")
 search(@RequestQuery() query: Record<string, unknown>) {
   return query.keyword;
@@ -370,7 +564,7 @@ detail(@RequestPath(0) id: string) {}
 
 @GetMapping("/:a/:b")
 pair(@RequestPath() parts: string[]) {
-  // æ—  index ä¸”å¤šæ®µ â†’ æ•°ç»„
+  // no index + multiple segments â†?array
 }`,
       functionalExample: `// Functional routes usually take (req, res); use Controller + param decorators for wrapped injection
 Application.POST("/api/demo", async (req, res) => {
@@ -395,7 +589,7 @@ Application.POST("/api/demo", async (req, res) => {
               type: "string",
               required: true,
               description:
-                "YAML dot path. â‘  server.port â‘¡ ${server.port} â‘¢ ${server.port:3990}. Empty string throws.",
+                "YAML dot path. â‘?server.port â‘?${server.port} â‘?${server.port:3990}. Empty string throws.",
             },
             {
               name: "defaultValue",
@@ -435,7 +629,7 @@ const port = getConfigValue<number>("server.port");
 const host = getConfigValue("redis.host", "127.0.0.1");
 const withPlaceholder = getConfigValue("\${server.port:3990}");
 
-// getConfig() â€” no args â†’ whole YAML
+// getConfig() â€?no args â†?whole YAML
 const root = getConfig();`,
     },
     {
@@ -536,7 +730,7 @@ export const applicationConfig: DocPage = {
       id: "route-option-nested",
       title: "RouteOption nested types",
       content:
-        "option.log â†’ LogRecordOption; option.rateLimit â†’ RateLimitOption; option.repeatSubmit â†’ RepeatSubmitOption.",
+        "option.log â†?LogRecordOption; option.rateLimit â†?RateLimitOption; option.repeatSubmit â†?RepeatSubmitOption.",
       configs: [
         ...typeConfigs(LOG_RECORD_OPTION_FIELDS, "en").map((c) => ({
           ...c,

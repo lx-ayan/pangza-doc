@@ -39,7 +39,7 @@ export const HEADER_LINK_DEFS: HeaderLink[] = [
   {
     key: "github",
     labelKey: "header.github",
-    href: "https://github.com/lx-ayan/pangza-admin-express",
+    href: "https://github.com/lx-ayan/pangza",
   },
 ];
 

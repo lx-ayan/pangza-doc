@@ -23,7 +23,7 @@ export const guidePagesEn: Record<string, DocPage> = {
         id: "scope",
         title: "Docs scope",
         content:
-          "Each module page merges API and configuration.\nExamples import from the real package â€” do not pull ORM / Validate / Redis from @pangza/core.",
+          "Each module page merges API and configuration.\nExamples import from the real package â€?do not pull ORM / Validate / Redis from @pangza/core.",
       },
       {
         id: "stack",
@@ -58,8 +58,8 @@ npm run dev`,
         content:
           "pangza g emits controller / service / mapper / entity, or g all.\nMapper imports from @pangza/orm; Service from @pangza/core.",
         functionalExample: `npx pangza g all user
-# mapper â†’ import { Mapper, MapperType } from "@pangza/orm"
-# service â†’ import { BaseService, Service } from "@pangza/core"`,
+# mapper â†?import { Mapper, MapperType } from "@pangza/orm"
+# service â†?import { BaseService, Service } from "@pangza/core"`,
       },
       {
         id: "install-manual",
@@ -94,7 +94,7 @@ Application
   .registry(EnableRedis())
   .registry(Auth({ redis: Redis, ignore: ["/api/pub/**"] }))
   .registry(Log())
-  .scan("src")
+  .scan(__dirname)
   .start();`,
         decoratorExample: `import { Controller, GetMapping, AuthIgnore } from "@pangza/core";
 
@@ -141,13 +141,13 @@ class AppWarmup implements ApplicationInit, ApplicationDestroy {
         id: "imports",
         title: "Import boundaries",
         content:
-          "Application / Service / Container / Logger / Json / Exception / config â†’ @pangza/core\n@Mapper / MapperType / entity decorators / EnableOrm / QueryWrapper â†’ @pangza/orm\n@Validate / NotNull / â€¦ â†’ @pangza/validate\nEnableRedis / Redis / RateLimiter â†’ @pangza/redis\nAuth â†’ @pangza/auth",
+          "Application / Service / Container / Logger / Json / Exception / config â†?@pangza/core\n@Mapper / MapperType / entity decorators / EnableOrm / QueryWrapper â†?@pangza/orm\n@Validate / NotNull / â€?â†?@pangza/validate\nEnableRedis / Redis / RateLimiter â†?@pangza/redis\nAuth â†?@pangza/auth",
       },
       {
         id: "pipeline",
         title: "HTTP pipeline",
         content:
-          "Non flux/raw: auth â†’ guards â†’ request interceptors â†’ param inject â†’ @Validate (if @pangza/validate installed) â†’ handler â†’ ObjectMapper â†’ response interceptors â†’ ResponseData (default).\nflux/raw: no ResponseData wrap.",
+          "Non flux/raw: Filter chain (outside router) â†?auth â†?guards â†?HandlerInterceptor.preHandle â†?request interceptors â†?param inject â†?@Validate â†?(AOP Around chain) handler â†?ObjectMapper â†?postHandle â†?response interceptors â†?ResponseData â†?finally afterCompletion.\nflux/raw: no ResponseData wrap. Custom method decorators: createAroundDecorator / markAdvice.",
       },
       {
         id: "ioc",

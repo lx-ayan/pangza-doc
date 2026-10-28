@@ -17,6 +17,36 @@ export interface ChangelogItem {
  */
 export const CHANGELOG: ChangelogItem[] = [
   {
+    version: "1.1.7",
+    date: "2026-10-28",
+    title: {
+      zh: "RequestForm、Filter/Interceptor、方法级 AOP、MIT",
+      en: "RequestForm, Filter/Interceptor, method AOP, MIT",
+    },
+    changes: [
+      {
+        zh: "@RequestForm / ParamType.FORM：注入 urlencoded/multipart 表单；CLI 默认 registry(urlencoded)",
+        en: "@RequestForm / ParamType.FORM for urlencoded/multipart; CLI registries urlencoded by default",
+      },
+      {
+        zh: "Servlet 风格 @WebFilter / Filter + Spring MVC @Interceptor / HandlerInterceptor（pre/post/afterCompletion、路径与 order）",
+        en: "Servlet-style @WebFilter / Filter and Spring MVC @Interceptor / HandlerInterceptor (pre/post/afterCompletion, paths, order)",
+      },
+      {
+        zh: "方法级 AOP：createAroundDecorator / Around / Before / After*、markAdvice + registerAroundAdvice；Controller 内 getMethodInvocationContext()",
+        en: "Method AOP: createAroundDecorator / Around / Before / After*, markAdvice + registerAroundAdvice; getMethodInvocationContext() in Controllers",
+      },
+      {
+        zh: "Application.scan(__dirname) 推荐写法；无 TS loader 时跳过 .ts，避免 build 后误加载源码；跳过入口 main 防二次 start",
+        en: "Prefer Application.scan(__dirname); skip .ts without TS loader after build; skip entry main to avoid double start",
+      },
+      {
+        zh: "仓库与 npm 包声明 MIT；packages/*/src 仅保留 TypeScript 源码",
+        en: "MIT license for repo and npm packages; packages/*/src keeps TypeScript only",
+      },
+    ],
+  },
+  {
     version: "1.1.6",
     date: "2026-10-27",
     title: {
