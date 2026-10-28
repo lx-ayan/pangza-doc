@@ -1,0 +1,72 @@
+.site-header__mobile {
+  display: none;
+  align-items: center;
+}
+
+.site-header__desktop {
+  display: flex;
+  align-items: center;
+}
+
+/* 侧栏分组标题：固定展示，无展开/折叠 */
+.docs-sider .ant-menu-item-group-title,
+.ant-drawer-body .ant-menu-item-group-title {
+  padding: 16px 16px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(0, 0, 0, 0.45);
+  text-transform: none;
+}
+
+.docs-sider .ant-menu-item-group:not(:first-child) .ant-menu-item-group-title,
+.ant-drawer-body .ant-menu-item-group:not(:first-child) .ant-menu-item-group-title {
+  margin-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 16px;
+}
+
+.docs-mobile-menu-btn {
+  display: none;
+  margin-bottom: 16px;
+}
+
+.doc-article {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  gap: 24px;
+  align-items: start;
+}
+
+.doc-article__toc {
+  position: sticky;
+  top: 88px;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+}
+
+@media (max-width: 992px) {
+  .site-header__desktop {
+    display: none;
+  }
+
+  .site-header__mobile {
+    display: inline-flex;
+  }
+
+  .docs-sider {
+    display: none !important;
+  }
+
+  .docs-mobile-menu-btn {
+    display: block;
+  }
+
+  .doc-article {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-article__toc {
+    display: none;
+  }
+}

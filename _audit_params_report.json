@@ -1,0 +1,4516 @@
+{
+  "summary": {
+    "totalFindings": 254,
+    "high": 122,
+    "medium": 130,
+    "low": 2,
+    "okApiTotal": 366,
+    "totalApiTotal": 552
+  },
+  "pageSummaries": [
+    {
+      "file": "application.ts",
+      "page": "applicationApi",
+      "key": "Application-api",
+      "sections": 8,
+      "apis": 27,
+      "okApis": 25,
+      "findings": 6
+    },
+    {
+      "file": "application.ts",
+      "page": "applicationConfig",
+      "key": "Application-config",
+      "sections": 2,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 1
+    },
+    {
+      "file": "auth.ts",
+      "page": "authApi",
+      "key": "Auth-api",
+      "sections": 7,
+      "apis": 22,
+      "okApis": 13,
+      "findings": 13
+    },
+    {
+      "file": "auth.ts",
+      "page": "authConfig",
+      "key": "Auth-config",
+      "sections": 2,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisApi",
+      "key": "Redis-api",
+      "sections": 9,
+      "apis": 52,
+      "okApis": 32,
+      "findings": 23
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisConfig",
+      "key": "Redis-config",
+      "sections": 3,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "key": "ORM-api",
+      "sections": 25,
+      "apis": 99,
+      "okApis": 58,
+      "findings": 57
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormConfig",
+      "key": "ORM-config",
+      "sections": 3,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "service.ts",
+      "page": "serviceApi",
+      "key": "Service-api",
+      "sections": 4,
+      "apis": 12,
+      "okApis": 4,
+      "findings": 9
+    },
+    {
+      "file": "service.ts",
+      "page": "serviceConfig",
+      "key": "Service-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "validateApi",
+      "key": "Validate-api",
+      "sections": 1,
+      "apis": 8,
+      "okApis": 5,
+      "findings": 3
+    },
+    {
+      "file": "rest.ts",
+      "page": "validateConfig",
+      "key": "Validate-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "exceptionApi",
+      "key": "Exception-api",
+      "sections": 1,
+      "apis": 8,
+      "okApis": 6,
+      "findings": 2
+    },
+    {
+      "file": "rest.ts",
+      "page": "exceptionConfig",
+      "key": "Exception-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "jsonApi",
+      "key": "Json-api",
+      "sections": 1,
+      "apis": 8,
+      "okApis": 6,
+      "findings": 3
+    },
+    {
+      "file": "rest.ts",
+      "page": "jsonConfig",
+      "key": "Json-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "logApi",
+      "key": "Log-api",
+      "sections": 1,
+      "apis": 9,
+      "okApis": 9,
+      "findings": 1
+    },
+    {
+      "file": "rest.ts",
+      "page": "logConfig",
+      "key": "Log-config",
+      "sections": 2,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "loggerApi",
+      "key": "Logger-api",
+      "sections": 1,
+      "apis": 4,
+      "okApis": 4,
+      "findings": 1
+    },
+    {
+      "file": "rest.ts",
+      "page": "loggerConfig",
+      "key": "Logger-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "configApi",
+      "key": "config-api",
+      "sections": 1,
+      "apis": 10,
+      "okApis": 10,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "configConfig",
+      "key": "config-config",
+      "sections": 3,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "key": "schedule-api",
+      "sections": 1,
+      "apis": 6,
+      "okApis": 3,
+      "findings": 5
+    },
+    {
+      "file": "rest.ts",
+      "page": "scheduleConfig",
+      "key": "schedule-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "encryptApi",
+      "key": "encrypt-api",
+      "sections": 1,
+      "apis": 3,
+      "okApis": 3,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "encryptConfig",
+      "key": "encrypt-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "langchainApi",
+      "key": "langchain-api",
+      "sections": 1,
+      "apis": 1,
+      "okApis": 0,
+      "findings": 1
+    },
+    {
+      "file": "rest.ts",
+      "page": "langchainConfig",
+      "key": "langchain-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "typesApi",
+      "key": "types-api",
+      "sections": 1,
+      "apis": 1,
+      "okApis": 1,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "typesConfig",
+      "key": "types-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "rest.ts",
+      "page": "utilsApi",
+      "key": "utils-api",
+      "sections": 1,
+      "apis": 6,
+      "okApis": 4,
+      "findings": 2
+    },
+    {
+      "file": "rest.ts",
+      "page": "utilsConfig",
+      "key": "utils-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/application.ts",
+      "page": "applicationApi",
+      "key": "Application-api",
+      "sections": 8,
+      "apis": 27,
+      "okApis": 25,
+      "findings": 6
+    },
+    {
+      "file": "en/application.ts",
+      "page": "applicationConfig",
+      "key": "Application-config",
+      "sections": 2,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 1
+    },
+    {
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "key": "Auth-api",
+      "sections": 7,
+      "apis": 22,
+      "okApis": 13,
+      "findings": 13
+    },
+    {
+      "file": "en/auth.ts",
+      "page": "authConfig",
+      "key": "Auth-config",
+      "sections": 2,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "key": "Redis-api",
+      "sections": 9,
+      "apis": 52,
+      "okApis": 32,
+      "findings": 23
+    },
+    {
+      "file": "en/redis.ts",
+      "page": "redisConfig",
+      "key": "Redis-config",
+      "sections": 3,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "key": "ORM-api",
+      "sections": 25,
+      "apis": 99,
+      "okApis": 58,
+      "findings": 57
+    },
+    {
+      "file": "en/orm.ts",
+      "page": "ormConfig",
+      "key": "ORM-config",
+      "sections": 3,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/service.ts",
+      "page": "serviceApi",
+      "key": "Service-api",
+      "sections": 4,
+      "apis": 12,
+      "okApis": 4,
+      "findings": 9
+    },
+    {
+      "file": "en/service.ts",
+      "page": "serviceConfig",
+      "key": "Service-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "validateApi",
+      "key": "Validate-api",
+      "sections": 1,
+      "apis": 8,
+      "okApis": 5,
+      "findings": 3
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "validateConfig",
+      "key": "Validate-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "exceptionApi",
+      "key": "Exception-api",
+      "sections": 1,
+      "apis": 8,
+      "okApis": 6,
+      "findings": 2
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "exceptionConfig",
+      "key": "Exception-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "jsonApi",
+      "key": "Json-api",
+      "sections": 1,
+      "apis": 8,
+      "okApis": 6,
+      "findings": 3
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "jsonConfig",
+      "key": "Json-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "logApi",
+      "key": "Log-api",
+      "sections": 1,
+      "apis": 9,
+      "okApis": 9,
+      "findings": 1
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "logConfig",
+      "key": "Log-config",
+      "sections": 2,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "loggerApi",
+      "key": "Logger-api",
+      "sections": 1,
+      "apis": 4,
+      "okApis": 4,
+      "findings": 1
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "loggerConfig",
+      "key": "Logger-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "configApi",
+      "key": "config-api",
+      "sections": 1,
+      "apis": 10,
+      "okApis": 10,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "configConfig",
+      "key": "config-config",
+      "sections": 3,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "scheduleApi",
+      "key": "schedule-api",
+      "sections": 1,
+      "apis": 6,
+      "okApis": 3,
+      "findings": 5
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "scheduleConfig",
+      "key": "schedule-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "encryptApi",
+      "key": "encrypt-api",
+      "sections": 1,
+      "apis": 3,
+      "okApis": 3,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "encryptConfig",
+      "key": "encrypt-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "langchainApi",
+      "key": "langchain-api",
+      "sections": 1,
+      "apis": 1,
+      "okApis": 0,
+      "findings": 1
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "langchainConfig",
+      "key": "langchain-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "typesApi",
+      "key": "types-api",
+      "sections": 1,
+      "apis": 1,
+      "okApis": 1,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "typesConfig",
+      "key": "types-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "utilsApi",
+      "key": "utils-api",
+      "sections": 1,
+      "apis": 6,
+      "okApis": 4,
+      "findings": 2
+    },
+    {
+      "file": "en/rest.ts",
+      "page": "utilsConfig",
+      "key": "utils-config",
+      "sections": 1,
+      "apis": 0,
+      "okApis": 0,
+      "findings": 0
+    }
+  ],
+  "high": [
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "scan-registry",
+      "api": "Application.static",
+      "signature": "static static(url: string | string[]): typeof Application",
+      "missing": "has signature with 1 arg(s) [url: string | string[]] but no params",
+      "requiredMissing": [
+        "url"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "api": "AuthUtil.login",
+      "signature": "login(loginId, rolesOrOpts?, permissions?, profile?): Promise<string>",
+      "missing": "has signature with 4 arg(s) [loginId, rolesOrOpts?, permissions?, profile?] but no params",
+      "requiredMissing": [
+        "loginId"
+      ],
+      "optionalMissing": [
+        "rolesOrOpts",
+        "permissions",
+        "profile"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "session-read",
+      "api": "AuthUtil.loadSession",
+      "signature": "loadSession(token, { touch? }): Promise<AuthSession | null>",
+      "missing": "has signature with 2 arg(s) [token, { touch? }] but no params",
+      "requiredMissing": [
+        "token"
+      ],
+      "optionalMissing": [
+        "{ touch"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "rbac",
+      "api": "AuthUtil.hasRole / hasPermission",
+      "signature": "hasRole(role: string) / hasPermission(permission: string)",
+      "missing": "has signature with 1 arg(s) [role: string] but no params",
+      "requiredMissing": [
+        "role"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "rbac",
+      "api": "AuthUtil.checkRole / checkPermission",
+      "signature": "checkRole(role: string) / checkPermission(permission: string)",
+      "missing": "has signature with 1 arg(s) [role: string] but no params",
+      "requiredMissing": [
+        "role"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "token-api",
+      "api": "generateStyleToken",
+      "signature": "generateStyleToken(style: TokenStyle): string",
+      "missing": "has signature with 1 arg(s) [style: TokenStyle] but no params",
+      "requiredMissing": [
+        "style"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "token-api",
+      "api": "createAuthToken",
+      "signature": "createAuthToken(options, payload): Promise<string>",
+      "missing": "has signature with 2 arg(s) [options, payload] but no params",
+      "requiredMissing": [
+        "options",
+        "payload"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "token-api",
+      "api": "verifyAuthToken",
+      "signature": "verifyAuthToken(options, token): boolean",
+      "missing": "has signature with 2 arg(s) [options, token] but no params",
+      "requiredMissing": [
+        "options",
+        "token"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "api": "Redis.key",
+      "signature": "key(raw: string): string",
+      "missing": "has signature with 1 arg(s) [raw: string] but no params",
+      "requiredMissing": [
+        "raw"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "set / get / del / exists",
+      "signature": "set(key, value, ttlSeconds?) / get(key) / del(...keys) / exists(key)",
+      "missing": "has signature with 3 arg(s) [key, value, ttlSeconds?] but no params",
+      "requiredMissing": [
+        "key",
+        "value"
+      ],
+      "optionalMissing": [
+        "ttlSeconds"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "setJSON / getJSON",
+      "signature": "setJSON(key, value, ttlSeconds?) / getJSON<T>(key)",
+      "missing": "has signature with 3 arg(s) [key, value, ttlSeconds?] but no params",
+      "requiredMissing": [
+        "key",
+        "value"
+      ],
+      "optionalMissing": [
+        "ttlSeconds"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "setPx / setJSONPx",
+      "signature": "setPx(key, value, ttlMs) / setJSONPx(key, value, ttlMs)",
+      "missing": "has signature with 3 arg(s) [key, value, ttlMs] but no params",
+      "requiredMissing": [
+        "key",
+        "value",
+        "ttlMs"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "deleteByPrefix",
+      "signature": "deleteByPrefix(prefix: string): Promise<number>",
+      "missing": "has signature with 1 arg(s) [prefix: string] but no params",
+      "requiredMissing": [
+        "prefix"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "simple-lock",
+      "api": "tryLock",
+      "signature": "tryLock(key, option?: TryLockOption): Promise<LockHandle | null>",
+      "missing": "signature args undocumented in params: key, option?: TryLockOption (have: [ttlMs, token])",
+      "requiredMissing": [
+        "key"
+      ],
+      "optionalMissing": [
+        "option"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "simple-lock",
+      "api": "withLock",
+      "signature": "withLock(key, fn, option?: WithLockOption): Promise<T>",
+      "missing": "signature args undocumented in params: key, fn, option?: WithLockOption (have: [renewIntervalMs])",
+      "requiredMissing": [
+        "key",
+        "fn"
+      ],
+      "optionalMissing": [
+        "option"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "simple-lock",
+      "api": "rateLimit / rateLimitSliding",
+      "signature": "rateLimit(key, windowSec, count) / rateLimitSliding(key, windowMs, count)",
+      "missing": "has signature with 3 arg(s) [key, windowSec, count] but no params",
+      "requiredMissing": [
+        "key",
+        "windowSec",
+        "count"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "getLock",
+      "signature": "getLock(name: string): RLock",
+      "missing": "has signature with 1 arg(s) [name: string] but no params",
+      "requiredMissing": [
+        "name"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "getMultiLock",
+      "signature": "getMultiLock(...locks: RLock[]): RLock",
+      "missing": "has signature with 1 arg(s) [...locks: RLock[]] but no params",
+      "requiredMissing": [
+        "locks"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "Redisson.withLock",
+      "signature": "withLock(name, fn, leaseMs?): Promise<T>",
+      "missing": "has signature with 3 arg(s) [name, fn, leaseMs?] but no params",
+      "requiredMissing": [
+        "name",
+        "fn"
+      ],
+      "optionalMissing": [
+        "leaseMs"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-name",
+      "api": "getTableName",
+      "signature": "getTableName(entity: Ctor): string | undefined",
+      "missing": "has signature with 1 arg(s) [entity: Ctor] but no params",
+      "requiredMissing": [
+        "entity"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "field-select",
+      "api": "hydrateFieldSelects",
+      "signature": "hydrateFieldSelects(Entity, rows, options?)",
+      "missing": "has signature with 3 arg(s) [Entity, rows, options?] but no params",
+      "requiredMissing": [
+        "Entity",
+        "rows"
+      ],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "api": "@ManyToOne",
+      "signature": "@ManyToOne(() => Target, { foreignKey, ... })",
+      "missing": "signature args undocumented in params: () => Target, { foreignKey, ... } (have: [foreignKey, targetKey, eager, fetch, depth, datasource / db])",
+      "requiredMissing": [
+        "{ foreignKey, ... }"
+      ],
+      "optionalMissing": [
+        "() => Target"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "api": "@OneToMany",
+      "signature": "@OneToMany(() => Target, { foreignKey, ... })",
+      "missing": "signature args undocumented in params: () => Target, { foreignKey, ... } (have: [foreignKey, localKey, eager / fetch / depth / datasource])",
+      "requiredMissing": [
+        "{ foreignKey, ... }"
+      ],
+      "optionalMissing": [
+        "() => Target"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "api": "@ManyToMany",
+      "signature": "@ManyToMany(() => Target, { joinTable, joinColumn, inverseJoinColumn })",
+      "missing": "signature args undocumented in params: () => Target, { joinTable, joinColumn, inverseJoinColumn } (have: [joinTable, joinColumn, inverseJoinColumn, targetKey / localKey / eager / depth])",
+      "requiredMissing": [
+        "{ joinTable, joinColumn, inverseJoinColumn }"
+      ],
+      "optionalMissing": [
+        "() => Target"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "table / useTable / clearTableCache",
+      "signature": "table(name, MapperTableOptions?)",
+      "missing": "has signature with 2 arg(s) [name, MapperTableOptions?] but no params",
+      "requiredMissing": [
+        "name"
+      ],
+      "optionalMissing": [
+        "MapperTableOptions"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectById",
+      "signature": "selectById(id, options?: SelectQueryOptions)",
+      "missing": "has signature with 2 arg(s) [id, options?: SelectQueryOptions] but no params",
+      "requiredMissing": [
+        "id"
+      ],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectPage",
+      "signature": "selectPage(page, wrapper?, options?)",
+      "missing": "has signature with 3 arg(s) [page, wrapper?, options?] but no params",
+      "requiredMissing": [
+        "page"
+      ],
+      "optionalMissing": [
+        "wrapper",
+        "options"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "insert",
+      "signature": "insert(entity)",
+      "missing": "has signature with 1 arg(s) [entity] but no params",
+      "requiredMissing": [
+        "entity"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "saveBatch",
+      "signature": "saveBatch(entities)",
+      "missing": "has signature with 1 arg(s) [entities] but no params",
+      "requiredMissing": [
+        "entities"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "saveOrUpdate",
+      "signature": "saveOrUpdate(entity)",
+      "missing": "has signature with 1 arg(s) [entity] but no params",
+      "requiredMissing": [
+        "entity"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "updateById",
+      "signature": "updateById(entity)",
+      "missing": "has signature with 1 arg(s) [entity] but no params",
+      "requiredMissing": [
+        "entity"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "update",
+      "signature": "update(entity, wrapper)",
+      "missing": "has signature with 2 arg(s) [entity, wrapper] but no params",
+      "requiredMissing": [
+        "entity",
+        "wrapper"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "updateBatch",
+      "signature": "updateBatch(entities)",
+      "missing": "has signature with 1 arg(s) [entities] but no params",
+      "requiredMissing": [
+        "entities"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-search",
+      "api": "getQueryWrapper",
+      "signature": "getQueryWrapper(form, DtoClass, consumer?)",
+      "missing": "has signature with 3 arg(s) [form, DtoClass, consumer?] but no params",
+      "requiredMissing": [
+        "form",
+        "DtoClass"
+      ],
+      "optionalMissing": [
+        "consumer"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-search",
+      "api": "getQueryWrapperAndPage",
+      "signature": "getQueryWrapperAndPage(form, Dto, pageNum?, pageSize?, consumer?)",
+      "missing": "has signature with 5 arg(s) [form, Dto, pageNum?, pageSize?, consumer?] but no params",
+      "requiredMissing": [
+        "form",
+        "Dto"
+      ],
+      "optionalMissing": [
+        "pageNum",
+        "pageSize",
+        "consumer"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "transaction",
+      "api": "Db.transaction / Db.transactionOn",
+      "signature": "Db.transaction(fn) / Db.transactionOn(name, fn, { propagation? })",
+      "missing": "has signature with 1 arg(s) [fn] but no params",
+      "requiredMissing": [
+        "fn"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "db",
+      "api": "Db.register",
+      "signature": "Db.register(name, config) | Db.register(config)",
+      "missing": "has signature with 2 arg(s) [name, config] but no params",
+      "requiredMissing": [
+        "name",
+        "config"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "db",
+      "api": "Db.query / Db.queryOn",
+      "signature": "Db.query(sql, params?) / Db.queryOn(name, sql, params?)",
+      "missing": "has signature with 2 arg(s) [sql, params?] but no params",
+      "requiredMissing": [
+        "sql"
+      ],
+      "optionalMissing": [
+        "params"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "xml",
+      "api": "@MapperXml",
+      "signature": "@MapperXml(\"namespace\")",
+      "missing": "has signature with 1 arg(s) [\"namespace\"] but no params",
+      "requiredMissing": [
+        "\"namespace\""
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "api": "assertIdent",
+      "signature": "assertIdent(name: string): string",
+      "missing": "has signature with 1 arg(s) [name: string] but no params",
+      "requiredMissing": [
+        "name"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "api": "assertSafeUint",
+      "signature": "assertSafeUint(value, label?): number",
+      "missing": "has signature with 2 arg(s) [value, label?] but no params",
+      "requiredMissing": [
+        "value"
+      ],
+      "optionalMissing": [
+        "label"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "api": "escapeLike",
+      "signature": "escapeLike(value: string): string",
+      "missing": "has signature with 1 arg(s) [value: string] but no params",
+      "requiredMissing": [
+        "value"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "api": "assertSafeLastSql",
+      "signature": "assertSafeLastSql(sql: string): string",
+      "missing": "has signature with 1 arg(s) [sql: string] but no params",
+      "requiredMissing": [
+        "sql"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "dialect",
+      "api": "getDialect",
+      "signature": "getDialect(\"mysql\"|\"postgresql\"|\"sqlserver\"|别名): Dialect",
+      "missing": "has signature with 1 arg(s) [\"mysql\"|\"postgresql\"|\"sqlserver\"|别名] but no params",
+      "requiredMissing": [
+        "\"mysql\"|\"postgresql\"|\"sqlserver\"|别名"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "configureOrm",
+      "signature": "configureOrm(patch: Partial<ResolvedOrmConfig>)",
+      "missing": "has signature with 1 arg(s) [patch: Partial<ResolvedOrmConfig>] but no params",
+      "requiredMissing": [
+        "patch"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "container",
+      "api": "Container.bindClass",
+      "signature": "bindClass(Ctor): void",
+      "missing": "has signature with 1 arg(s) [Ctor] but no params",
+      "requiredMissing": [
+        "Ctor"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "container",
+      "api": "Container.bindAlias",
+      "signature": "bindAlias(alias: string, Ctor): void",
+      "missing": "has signature with 2 arg(s) [alias: string, Ctor] but no params",
+      "requiredMissing": [
+        "alias",
+        "Ctor"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "container",
+      "api": "Container.get / has",
+      "signature": "get<T>(token): T / has(token): boolean",
+      "missing": "has signature with 1 arg(s) [token] but no params",
+      "requiredMissing": [
+        "token"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "decorators",
+      "api": "@Resource",
+      "signature": "@Resource(Type | string | symbol)",
+      "missing": "has signature with 1 arg(s) [Type | string | symbol] but no params",
+      "requiredMissing": [
+        "Type | string | symbol"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "decorators",
+      "api": "@Inject",
+      "signature": "@Inject(Token)",
+      "missing": "has signature with 1 arg(s) [Token] but no params",
+      "requiredMissing": [
+        "Token"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "mapper-service",
+      "api": "@Mapper",
+      "signature": "@Mapper(table | Entity, idField | options?)",
+      "missing": "has signature with 2 arg(s) [table | Entity, idField | options?] but no params",
+      "requiredMissing": [
+        "table | Entity"
+      ],
+      "optionalMissing": [
+        "idField | options"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "mapper-service",
+      "api": "@Service",
+      "signature": "@Service(MapperClass)",
+      "missing": "has signature with 1 arg(s) [MapperClass] but no params",
+      "requiredMissing": [
+        "MapperClass"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "validateApi",
+      "sectionId": "apis",
+      "api": "@Min / @Max",
+      "signature": "@Min(n, message?) / @Max(n, message?)",
+      "missing": "has signature with 2 arg(s) [n, message?] but no params",
+      "requiredMissing": [
+        "n"
+      ],
+      "optionalMissing": [
+        "message"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "validateApi",
+      "sectionId": "apis",
+      "api": "@Custom",
+      "signature": "@Custom(fn, message?)",
+      "missing": "has signature with 2 arg(s) [fn, message?] but no params",
+      "requiredMissing": [
+        "fn"
+      ],
+      "optionalMissing": [
+        "message"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "exceptionApi",
+      "sectionId": "apis",
+      "api": "registerHandler",
+      "signature": "registerHandler(errorType, handler)",
+      "missing": "has signature with 2 arg(s) [errorType, handler] but no params",
+      "requiredMissing": [
+        "errorType",
+        "handler"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "jsonApi",
+      "sectionId": "apis",
+      "api": "@JsonInclude",
+      "signature": "@JsonInclude(JsonIncludeType)",
+      "missing": "has signature with 1 arg(s) [JsonIncludeType] but no params",
+      "requiredMissing": [
+        "JsonIncludeType"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.scheduleJob",
+      "signature": "scheduleJob(entity: ScheduleJobEntity): void",
+      "missing": "has signature with 1 arg(s) [entity: ScheduleJobEntity] but no params",
+      "requiredMissing": [
+        "entity"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.unschedule",
+      "signature": "unschedule(id: string): void",
+      "missing": "has signature with 1 arg(s) [id: string] but no params",
+      "requiredMissing": [
+        "id"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.runOnce",
+      "signature": "runOnce(entity | beanName): Promise<void>",
+      "missing": "has signature with 1 arg(s) [entity | beanName] but no params",
+      "requiredMissing": [
+        "entity | beanName"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "langchainApi",
+      "sectionId": "status",
+      "api": "AiModel",
+      "signature": "AiModel(model: string)",
+      "missing": "has signature with 1 arg(s) [model: string] but no params",
+      "requiredMissing": [
+        "model"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "utilsApi",
+      "sectionId": "apis",
+      "api": "ResponseData.success",
+      "signature": "success<T>(data: T, message?: string)",
+      "missing": "has signature with 2 arg(s) [data: T, message?: string] but no params",
+      "requiredMissing": [
+        "data"
+      ],
+      "optionalMissing": [
+        "message"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/application.ts",
+      "page": "applicationApi",
+      "sectionId": "scan-registry",
+      "api": "Application.static",
+      "signature": "static static(url: string | string[]): typeof Application",
+      "missing": "has signature with 1 arg(s) [url: string | string[]] but no params",
+      "requiredMissing": [
+        "url"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "api": "AuthUtil.login",
+      "signature": "login(loginId, rolesOrOpts?, permissions?, profile?): Promise<string>",
+      "missing": "has signature with 4 arg(s) [loginId, rolesOrOpts?, permissions?, profile?] but no params",
+      "requiredMissing": [
+        "loginId"
+      ],
+      "optionalMissing": [
+        "rolesOrOpts",
+        "permissions",
+        "profile"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "session-read",
+      "api": "AuthUtil.loadSession",
+      "signature": "loadSession(token, { touch? }): Promise<AuthSession | null>",
+      "missing": "has signature with 2 arg(s) [token, { touch? }] but no params",
+      "requiredMissing": [
+        "token"
+      ],
+      "optionalMissing": [
+        "{ touch"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "rbac",
+      "api": "AuthUtil.hasRole / hasPermission",
+      "signature": "hasRole(role: string) / hasPermission(permission: string)",
+      "missing": "has signature with 1 arg(s) [role: string] but no params",
+      "requiredMissing": [
+        "role"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "rbac",
+      "api": "AuthUtil.checkRole / checkPermission",
+      "signature": "checkRole(role: string) / checkPermission(permission: string)",
+      "missing": "has signature with 1 arg(s) [role: string] but no params",
+      "requiredMissing": [
+        "role"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "token-api",
+      "api": "generateStyleToken",
+      "signature": "generateStyleToken(style: TokenStyle): string",
+      "missing": "has signature with 1 arg(s) [style: TokenStyle] but no params",
+      "requiredMissing": [
+        "style"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "token-api",
+      "api": "createAuthToken",
+      "signature": "createAuthToken(options, payload): Promise<string>",
+      "missing": "has signature with 2 arg(s) [options, payload] but no params",
+      "requiredMissing": [
+        "options",
+        "payload"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "token-api",
+      "api": "verifyAuthToken",
+      "signature": "verifyAuthToken(options, token): boolean",
+      "missing": "has signature with 2 arg(s) [options, token] but no params",
+      "requiredMissing": [
+        "options",
+        "token"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "api": "Redis.key",
+      "signature": "key(raw: string): string",
+      "missing": "has signature with 1 arg(s) [raw: string] but no params",
+      "requiredMissing": [
+        "raw"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "set / get / del / exists",
+      "signature": "set(key, value, ttlSeconds?) / get(key) / del(...keys) / exists(key)",
+      "missing": "has signature with 3 arg(s) [key, value, ttlSeconds?] but no params",
+      "requiredMissing": [
+        "key",
+        "value"
+      ],
+      "optionalMissing": [
+        "ttlSeconds"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "setJSON / getJSON",
+      "signature": "setJSON(key, value, ttlSeconds?) / getJSON<T>(key)",
+      "missing": "has signature with 3 arg(s) [key, value, ttlSeconds?] but no params",
+      "requiredMissing": [
+        "key",
+        "value"
+      ],
+      "optionalMissing": [
+        "ttlSeconds"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "setPx / setJSONPx",
+      "signature": "setPx(key, value, ttlMs) / setJSONPx(key, value, ttlMs)",
+      "missing": "has signature with 3 arg(s) [key, value, ttlMs] but no params",
+      "requiredMissing": [
+        "key",
+        "value",
+        "ttlMs"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "deleteByPrefix",
+      "signature": "deleteByPrefix(prefix: string): Promise<number>",
+      "missing": "has signature with 1 arg(s) [prefix: string] but no params",
+      "requiredMissing": [
+        "prefix"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "simple-lock",
+      "api": "tryLock",
+      "signature": "tryLock(key, option?: TryLockOption): Promise<LockHandle | null>",
+      "missing": "signature args undocumented in params: key, option?: TryLockOption (have: [ttlMs, token])",
+      "requiredMissing": [
+        "key"
+      ],
+      "optionalMissing": [
+        "option"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "simple-lock",
+      "api": "withLock",
+      "signature": "withLock(key, fn, option?: WithLockOption): Promise<T>",
+      "missing": "signature args undocumented in params: key, fn, option?: WithLockOption (have: [renewIntervalMs])",
+      "requiredMissing": [
+        "key",
+        "fn"
+      ],
+      "optionalMissing": [
+        "option"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "simple-lock",
+      "api": "rateLimit / rateLimitSliding",
+      "signature": "rateLimit(key, windowSec, count) / rateLimitSliding(key, windowMs, count)",
+      "missing": "has signature with 3 arg(s) [key, windowSec, count] but no params",
+      "requiredMissing": [
+        "key",
+        "windowSec",
+        "count"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "getLock",
+      "signature": "getLock(name: string): RLock",
+      "missing": "has signature with 1 arg(s) [name: string] but no params",
+      "requiredMissing": [
+        "name"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "getMultiLock",
+      "signature": "getMultiLock(...locks: RLock[]): RLock",
+      "missing": "has signature with 1 arg(s) [...locks: RLock[]] but no params",
+      "requiredMissing": [
+        "locks"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "Redisson.withLock",
+      "signature": "withLock(name, fn, leaseMs?): Promise<T>",
+      "missing": "has signature with 3 arg(s) [name, fn, leaseMs?] but no params",
+      "requiredMissing": [
+        "name",
+        "fn"
+      ],
+      "optionalMissing": [
+        "leaseMs"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-name",
+      "api": "getTableName",
+      "signature": "getTableName(entity: Ctor): string | undefined",
+      "missing": "has signature with 1 arg(s) [entity: Ctor] but no params",
+      "requiredMissing": [
+        "entity"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "field-select",
+      "api": "hydrateFieldSelects",
+      "signature": "hydrateFieldSelects(Entity, rows, options?)",
+      "missing": "has signature with 3 arg(s) [Entity, rows, options?] but no params",
+      "requiredMissing": [
+        "Entity",
+        "rows"
+      ],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "api": "@ManyToOne",
+      "signature": "@ManyToOne(() => Target, { foreignKey, ... })",
+      "missing": "signature args undocumented in params: () => Target, { foreignKey, ... } (have: [foreignKey, targetKey, eager, fetch, depth, datasource / db])",
+      "requiredMissing": [
+        "{ foreignKey, ... }"
+      ],
+      "optionalMissing": [
+        "() => Target"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "api": "@OneToMany",
+      "signature": "@OneToMany(() => Target, { foreignKey, ... })",
+      "missing": "signature args undocumented in params: () => Target, { foreignKey, ... } (have: [foreignKey, localKey, eager / fetch / depth / datasource])",
+      "requiredMissing": [
+        "{ foreignKey, ... }"
+      ],
+      "optionalMissing": [
+        "() => Target"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "api": "@ManyToMany",
+      "signature": "@ManyToMany(() => Target, { joinTable, joinColumn, inverseJoinColumn })",
+      "missing": "signature args undocumented in params: () => Target, { joinTable, joinColumn, inverseJoinColumn } (have: [joinTable, joinColumn, inverseJoinColumn, targetKey / localKey / eager / depth])",
+      "requiredMissing": [
+        "{ joinTable, joinColumn, inverseJoinColumn }"
+      ],
+      "optionalMissing": [
+        "() => Target"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "table / useTable / clearTableCache",
+      "signature": "table(name, MapperTableOptions?)",
+      "missing": "has signature with 2 arg(s) [name, MapperTableOptions?] but no params",
+      "requiredMissing": [
+        "name"
+      ],
+      "optionalMissing": [
+        "MapperTableOptions"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectById",
+      "signature": "selectById(id, options?: SelectQueryOptions)",
+      "missing": "has signature with 2 arg(s) [id, options?: SelectQueryOptions] but no params",
+      "requiredMissing": [
+        "id"
+      ],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectPage",
+      "signature": "selectPage(page, wrapper?, options?)",
+      "missing": "has signature with 3 arg(s) [page, wrapper?, options?] but no params",
+      "requiredMissing": [
+        "page"
+      ],
+      "optionalMissing": [
+        "wrapper",
+        "options"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "insert",
+      "signature": "insert(entity)",
+      "missing": "has signature with 1 arg(s) [entity] but no params",
+      "requiredMissing": [
+        "entity"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "saveBatch",
+      "signature": "saveBatch(entities)",
+      "missing": "has signature with 1 arg(s) [entities] but no params",
+      "requiredMissing": [
+        "entities"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "saveOrUpdate",
+      "signature": "saveOrUpdate(entity)",
+      "missing": "has signature with 1 arg(s) [entity] but no params",
+      "requiredMissing": [
+        "entity"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "updateById",
+      "signature": "updateById(entity)",
+      "missing": "has signature with 1 arg(s) [entity] but no params",
+      "requiredMissing": [
+        "entity"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "update",
+      "signature": "update(entity, wrapper)",
+      "missing": "has signature with 2 arg(s) [entity, wrapper] but no params",
+      "requiredMissing": [
+        "entity",
+        "wrapper"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "updateBatch",
+      "signature": "updateBatch(entities)",
+      "missing": "has signature with 1 arg(s) [entities] but no params",
+      "requiredMissing": [
+        "entities"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-search",
+      "api": "getQueryWrapper",
+      "signature": "getQueryWrapper(form, DtoClass, consumer?)",
+      "missing": "has signature with 3 arg(s) [form, DtoClass, consumer?] but no params",
+      "requiredMissing": [
+        "form",
+        "DtoClass"
+      ],
+      "optionalMissing": [
+        "consumer"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-search",
+      "api": "getQueryWrapperAndPage",
+      "signature": "getQueryWrapperAndPage(form, Dto, pageNum?, pageSize?, consumer?)",
+      "missing": "has signature with 5 arg(s) [form, Dto, pageNum?, pageSize?, consumer?] but no params",
+      "requiredMissing": [
+        "form",
+        "Dto"
+      ],
+      "optionalMissing": [
+        "pageNum",
+        "pageSize",
+        "consumer"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "transaction",
+      "api": "Db.transaction / Db.transactionOn",
+      "signature": "Db.transaction(fn) / Db.transactionOn(name, fn, { propagation? })",
+      "missing": "has signature with 1 arg(s) [fn] but no params",
+      "requiredMissing": [
+        "fn"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "db",
+      "api": "Db.register",
+      "signature": "Db.register(name, config) | Db.register(config)",
+      "missing": "has signature with 2 arg(s) [name, config] but no params",
+      "requiredMissing": [
+        "name",
+        "config"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "db",
+      "api": "Db.query / Db.queryOn",
+      "signature": "Db.query(sql, params?) / Db.queryOn(name, sql, params?)",
+      "missing": "has signature with 2 arg(s) [sql, params?] but no params",
+      "requiredMissing": [
+        "sql"
+      ],
+      "optionalMissing": [
+        "params"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "xml",
+      "api": "@MapperXml",
+      "signature": "@MapperXml(\"namespace\")",
+      "missing": "has signature with 1 arg(s) [\"namespace\"] but no params",
+      "requiredMissing": [
+        "\"namespace\""
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "api": "assertIdent",
+      "signature": "assertIdent(name: string): string",
+      "missing": "has signature with 1 arg(s) [name: string] but no params",
+      "requiredMissing": [
+        "name"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "api": "assertSafeUint",
+      "signature": "assertSafeUint(value, label?): number",
+      "missing": "has signature with 2 arg(s) [value, label?] but no params",
+      "requiredMissing": [
+        "value"
+      ],
+      "optionalMissing": [
+        "label"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "api": "escapeLike",
+      "signature": "escapeLike(value: string): string",
+      "missing": "has signature with 1 arg(s) [value: string] but no params",
+      "requiredMissing": [
+        "value"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "api": "assertSafeLastSql",
+      "signature": "assertSafeLastSql(sql: string): string",
+      "missing": "has signature with 1 arg(s) [sql: string] but no params",
+      "requiredMissing": [
+        "sql"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "dialect",
+      "api": "getDialect",
+      "signature": "getDialect(\"mysql\"|\"postgresql\"|\"sqlserver\"|alias): Dialect",
+      "missing": "has signature with 1 arg(s) [\"mysql\"|\"postgresql\"|\"sqlserver\"|alias] but no params",
+      "requiredMissing": [
+        "\"mysql\"|\"postgresql\"|\"sqlserver\"|alias"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "configureOrm",
+      "signature": "configureOrm(patch: Partial<ResolvedOrmConfig>)",
+      "missing": "has signature with 1 arg(s) [patch: Partial<ResolvedOrmConfig>] but no params",
+      "requiredMissing": [
+        "patch"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/service.ts",
+      "page": "serviceApi",
+      "sectionId": "container",
+      "api": "Container.bindClass",
+      "signature": "bindClass(Ctor): void",
+      "missing": "has signature with 1 arg(s) [Ctor] but no params",
+      "requiredMissing": [
+        "Ctor"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/service.ts",
+      "page": "serviceApi",
+      "sectionId": "container",
+      "api": "Container.bindAlias",
+      "signature": "bindAlias(alias: string, Ctor): void",
+      "missing": "has signature with 2 arg(s) [alias: string, Ctor] but no params",
+      "requiredMissing": [
+        "alias",
+        "Ctor"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/service.ts",
+      "page": "serviceApi",
+      "sectionId": "container",
+      "api": "Container.get / has",
+      "signature": "get<T>(token): T / has(token): boolean",
+      "missing": "has signature with 1 arg(s) [token] but no params",
+      "requiredMissing": [
+        "token"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/service.ts",
+      "page": "serviceApi",
+      "sectionId": "decorators",
+      "api": "@Resource",
+      "signature": "@Resource(Type | string | symbol)",
+      "missing": "has signature with 1 arg(s) [Type | string | symbol] but no params",
+      "requiredMissing": [
+        "Type | string | symbol"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/service.ts",
+      "page": "serviceApi",
+      "sectionId": "decorators",
+      "api": "@Inject",
+      "signature": "@Inject(Token)",
+      "missing": "has signature with 1 arg(s) [Token] but no params",
+      "requiredMissing": [
+        "Token"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/service.ts",
+      "page": "serviceApi",
+      "sectionId": "mapper-service",
+      "api": "@Mapper",
+      "signature": "@Mapper(table | Entity, idField | options?)",
+      "missing": "has signature with 2 arg(s) [table | Entity, idField | options?] but no params",
+      "requiredMissing": [
+        "table | Entity"
+      ],
+      "optionalMissing": [
+        "idField | options"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/service.ts",
+      "page": "serviceApi",
+      "sectionId": "mapper-service",
+      "api": "@Service",
+      "signature": "@Service(MapperClass)",
+      "missing": "has signature with 1 arg(s) [MapperClass] but no params",
+      "requiredMissing": [
+        "MapperClass"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "validateApi",
+      "sectionId": "apis",
+      "api": "@Min / @Max",
+      "signature": "@Min(n, message?) / @Max(n, message?)",
+      "missing": "has signature with 2 arg(s) [n, message?] but no params",
+      "requiredMissing": [
+        "n"
+      ],
+      "optionalMissing": [
+        "message"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "validateApi",
+      "sectionId": "apis",
+      "api": "@Custom",
+      "signature": "@Custom(fn, message?)",
+      "missing": "has signature with 2 arg(s) [fn, message?] but no params",
+      "requiredMissing": [
+        "fn"
+      ],
+      "optionalMissing": [
+        "message"
+      ]
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "exceptionApi",
+      "sectionId": "apis",
+      "api": "registerHandler",
+      "signature": "registerHandler(errorType, handler)",
+      "missing": "has signature with 2 arg(s) [errorType, handler] but no params",
+      "requiredMissing": [
+        "errorType",
+        "handler"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "jsonApi",
+      "sectionId": "apis",
+      "api": "@JsonInclude",
+      "signature": "@JsonInclude(JsonIncludeType)",
+      "missing": "has signature with 1 arg(s) [JsonIncludeType] but no params",
+      "requiredMissing": [
+        "JsonIncludeType"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.scheduleJob",
+      "signature": "scheduleJob(entity: ScheduleJobEntity): void",
+      "missing": "has signature with 1 arg(s) [entity: ScheduleJobEntity] but no params",
+      "requiredMissing": [
+        "entity"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.unschedule",
+      "signature": "unschedule(id: string): void",
+      "missing": "has signature with 1 arg(s) [id: string] but no params",
+      "requiredMissing": [
+        "id"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.runOnce",
+      "signature": "runOnce(entity | beanName): Promise<void>",
+      "missing": "has signature with 1 arg(s) [entity | beanName] but no params",
+      "requiredMissing": [
+        "entity | beanName"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "langchainApi",
+      "sectionId": "status",
+      "api": "AiModel",
+      "signature": "AiModel(model: string)",
+      "missing": "has signature with 1 arg(s) [model: string] but no params",
+      "requiredMissing": [
+        "model"
+      ],
+      "optionalMissing": []
+    },
+    {
+      "severity": "high",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "utilsApi",
+      "sectionId": "apis",
+      "api": "ResponseData.success",
+      "signature": "success<T>(data: T, message?: string)",
+      "missing": "has signature with 2 arg(s) [data: T, message?: string] but no params",
+      "requiredMissing": [
+        "data"
+      ],
+      "optionalMissing": [
+        "message"
+      ]
+    }
+  ],
+  "medium": [
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "lifecycle",
+      "api": "Log",
+      "missing": "functionalExample passes { writer } to Log but fields not in section params/configs: [writer]",
+      "keys": [
+        "writer"
+      ],
+      "allKeys": [
+        "writer"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "scan-registry",
+      "api": "Auth",
+      "missing": "functionalExample passes { redis } to Auth but fields not in section params/configs: [redis]",
+      "keys": [
+        "redis"
+      ],
+      "allKeys": [
+        "redis"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "routes",
+      "api": "@GetMapping / @PostMapping / @PutMapping / @DeleteMapping",
+      "signature": "@GetMapping(path?: string, option?: RouteOption)",
+      "missing": "has signature with 2 arg(s) [path?: string, option?: RouteOption] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "path",
+        "option"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "auth-decorators",
+      "api": "Application.GET",
+      "missing": "functionalExample passes { auth } to Application.GET but fields not in section params/configs: [auth]",
+      "keys": [
+        "auth"
+      ],
+      "allKeys": [
+        "auth"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "cross-cutting",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { validate, log, rateLimit, repeatSubmit, flux, raw } to Application.POST but fields not in section params/configs: [validate, log, rateLimit, repeatSubmit, flux, raw]",
+      "keys": [
+        "validate",
+        "log",
+        "rateLimit",
+        "repeatSubmit",
+        "flux",
+        "raw"
+      ],
+      "allKeys": [
+        "validate",
+        "log",
+        "rateLimit",
+        "repeatSubmit",
+        "flux",
+        "raw"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "application.ts",
+      "page": "applicationConfig",
+      "sectionId": "route-option",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { auth, rateLimit, repeatSubmit, log, validate } to Application.POST but fields not in section params/configs: [auth]",
+      "keys": [
+        "auth"
+      ],
+      "allKeys": [
+        "auth",
+        "rateLimit",
+        "repeatSubmit",
+        "log",
+        "validate"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "middleware",
+      "api": "Auth",
+      "signature": "Auth(options?: AuthOptions): RequestHandler",
+      "missing": "has signature with 1 arg(s) [options?: AuthOptions] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "api": "AuthUtil.logout",
+      "signature": "logout(token?: string): Promise<void>",
+      "missing": "has signature with 1 arg(s) [token?: string] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "token"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "api": "AuthUtil.login",
+      "missing": "functionalExample passes { username, device } to AuthUtil.login but fields not in section params/configs: [username, device]",
+      "keys": [
+        "username",
+        "device"
+      ],
+      "allKeys": [
+        "username",
+        "device"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "api": "AuthUtil.login",
+      "missing": "functionalExample passes { roles, permissions, username, device, timeout } to AuthUtil.login but fields not in section params/configs: [roles, permissions, username, device, timeout]",
+      "keys": [
+        "roles",
+        "permissions",
+        "username",
+        "device",
+        "timeout"
+      ],
+      "allKeys": [
+        "roles",
+        "permissions",
+        "username",
+        "device",
+        "timeout"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "session-read",
+      "api": "AuthUtil.loadSession",
+      "missing": "functionalExample passes { touch } to AuthUtil.loadSession but fields not in section params/configs: [touch]",
+      "keys": [
+        "touch"
+      ],
+      "allKeys": [
+        "touch"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "rbac",
+      "api": "Application.GET",
+      "missing": "functionalExample passes { auth } to Application.GET but fields not in section params/configs: [auth]",
+      "keys": [
+        "auth"
+      ],
+      "allKeys": [
+        "auth"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "api": "Redis.configure",
+      "signature": "configure(config?: RedisConfig): void",
+      "missing": "has signature with 1 arg(s) [config?: RedisConfig] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "config"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "api": "Redis.connect",
+      "signature": "connect(config?: RedisConfig): Promise<void>",
+      "missing": "has signature with 1 arg(s) [config?: RedisConfig] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "config"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "api": "Redis.configure",
+      "missing": "functionalExample passes { host, keyPrefix } to Redis.configure but fields not in section params/configs: [host, keyPrefix]",
+      "keys": [
+        "host",
+        "keyPrefix"
+      ],
+      "allKeys": [
+        "host",
+        "keyPrefix"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "Redis.setJSON",
+      "missing": "functionalExample passes { name } to Redis.setJSON but fields not in section params/configs: [name]",
+      "keys": [
+        "name"
+      ],
+      "allKeys": [
+        "name"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-structures",
+      "api": "pipeline",
+      "signature": "pipeline(fn: (multi) => void): Promise<unknown[]>",
+      "missing": "has signature with 1 arg(s) [fn: (multi) => void] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "fn"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "rate-repeat",
+      "api": "@RateLimiter",
+      "signature": "@RateLimiter(option?: RateLimitOption)",
+      "missing": "signature args undocumented in params: option?: RateLimitOption (have: [time, count, type, mode, key])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "option"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "rate-repeat",
+      "api": "@RepeatSubmit",
+      "signature": "@RepeatSubmit(option?: RepeatSubmitOption)",
+      "missing": "signature args undocumented in params: option?: RepeatSubmitOption (have: [interval, message])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "option"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "rate-repeat",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { rateLimit, repeatSubmit } to Application.POST but fields not in section params/configs: [rateLimit, repeatSubmit]",
+      "keys": [
+        "rateLimit",
+        "repeatSubmit"
+      ],
+      "allKeys": [
+        "rateLimit",
+        "repeatSubmit"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "cache",
+      "api": "@Cacheable",
+      "signature": "@Cacheable(option?: CacheableOption)",
+      "missing": "signature args undocumented in params: option?: CacheableOption (have: [key, ttl, keyGenerator])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "option"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "cache",
+      "api": "@CacheEvict",
+      "signature": "@CacheEvict(option?: CacheEvictOption)",
+      "missing": "signature args undocumented in params: option?: CacheEvictOption (have: [key, keyGenerator, allEntries])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "option"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "RLock.lock",
+      "signature": "lock(leaseTimeMs?: number): Promise<void>",
+      "missing": "has signature with 1 arg(s) [leaseTimeMs?: number] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "leaseTimeMs"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "RLock.tryLock",
+      "signature": "tryLock(waitTimeMs?, leaseTimeMs?): Promise<boolean>",
+      "missing": "has signature with 2 arg(s) [waitTimeMs?, leaseTimeMs?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "waitTimeMs",
+        "leaseTimeMs"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "id-type",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { idType } to configureOrm but fields not in section params/configs: [idType]",
+      "keys": [
+        "idType"
+      ],
+      "allKeys": [
+        "idType"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "select-method",
+      "api": "@Select",
+      "signature": "@Select(sql: string, options?: SelectOptions)",
+      "missing": "signature args undocumented in params: options?: SelectOptions (have: [sql, options.datasource, options.db])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "insert-decorator",
+      "api": "@Insert",
+      "signature": "@Insert(sql: string, options?: SqlExecuteOptions)",
+      "missing": "signature args undocumented in params: options?: SqlExecuteOptions (have: [sql, options.datasource, options.db])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "update-decorator",
+      "api": "@Update",
+      "signature": "@Update(sql: string, options?: SqlExecuteOptions)",
+      "missing": "signature args undocumented in params: options?: SqlExecuteOptions (have: [sql, options.datasource, options.db])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "delete-decorator",
+      "api": "@Delete",
+      "signature": "@Delete(sql: string, options?: SqlExecuteOptions)",
+      "missing": "signature args undocumented in params: options?: SqlExecuteOptions (have: [sql, options.datasource, options.db])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "field-select",
+      "api": "@Select（属性）",
+      "signature": "@Select(sql, options?: FieldSelectOptions & SqlExecuteOptions)",
+      "missing": "signature args undocumented in params: options?: FieldSelectOptions & SqlExecuteOptions (have: [sql, many, column, depth, eager, datasource / db])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "api": "mapper.selectList",
+      "missing": "functionalExample passes { relations } to mapper.selectList but fields not in section params/configs: [relations]",
+      "keys": [
+        "relations"
+      ],
+      "allKeys": [
+        "relations"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "api": "mapper.selectList",
+      "missing": "functionalExample passes { relations } to mapper.selectList but fields not in section params/configs: [relations]",
+      "keys": [
+        "relations"
+      ],
+      "allKeys": [
+        "relations"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "api": "hydrateRelations",
+      "missing": "functionalExample passes { relations } to hydrateRelations but fields not in section params/configs: [relations]",
+      "keys": [
+        "relations"
+      ],
+      "allKeys": [
+        "relations"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "@Mapper",
+      "signature": "@Mapper(tableOrEntity, idFieldOrOptions?)",
+      "missing": "signature args undocumented in params: idFieldOrOptions? (have: [tableOrEntity, options])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "idFieldOrOptions"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectOne",
+      "signature": "selectOne(wrapper?, options?)",
+      "missing": "has signature with 2 arg(s) [wrapper?, options?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "wrapper",
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectList",
+      "signature": "selectList(wrapper?, options?)",
+      "missing": "has signature with 2 arg(s) [wrapper?, options?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "wrapper",
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectCount",
+      "signature": "selectCount(wrapper?)",
+      "missing": "has signature with 1 arg(s) [wrapper?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "wrapper"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { sqlLog, logicDelete } to configureOrm but fields not in section params/configs: [sqlLog, logicDelete]",
+      "keys": [
+        "sqlLog",
+        "logicDelete"
+      ],
+      "allKeys": [
+        "sqlLog",
+        "logicDelete"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "table",
+      "missing": "functionalExample passes { entity, logicDelete, updateNullStrategy } to table but fields not in section params/configs: [entity, logicDelete, updateNullStrategy]",
+      "keys": [
+        "entity",
+        "logicDelete",
+        "updateNullStrategy"
+      ],
+      "allKeys": [
+        "entity",
+        "logicDelete",
+        "updateNullStrategy"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "mapper.selectPage",
+      "missing": "functionalExample passes { current, size } to mapper.selectPage but fields not in section params/configs: [current, size]",
+      "keys": [
+        "current",
+        "size"
+      ],
+      "allKeys": [
+        "current",
+        "size"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "mapper.saveBatch",
+      "missing": "functionalExample passes { username } to mapper.saveBatch but fields not in section params/configs: [username]",
+      "keys": [
+        "username"
+      ],
+      "allKeys": [
+        "username"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "mapper.saveBatch",
+      "missing": "functionalExample passes { username } to mapper.saveBatch but fields not in section params/configs: [username]",
+      "keys": [
+        "username"
+      ],
+      "allKeys": [
+        "username"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "mapper.updateBatch",
+      "missing": "functionalExample passes { id, username } to mapper.updateBatch but fields not in section params/configs: [id, username]",
+      "keys": [
+        "id",
+        "username"
+      ],
+      "allKeys": [
+        "id",
+        "username"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "query-wrapper",
+      "api": "构造",
+      "signature": "new QueryWrapper(options?) | QueryWrapper.forDatasource(name)",
+      "missing": "has signature with 1 arg(s) [options?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-search",
+      "api": "@TableSearch",
+      "signature": "@TableSearch(options? | OperType)",
+      "missing": "signature args undocumented in params: options? | OperType (have: [column, operator])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "transaction",
+      "api": "@Transactional",
+      "signature": "@Transactional(options?: { datasource?: string; propagation?: TransactionPropagation })",
+      "missing": "signature args undocumented in params: options?: { datasource?: string; propagation?: TransactionPropagation } (have: [datasource, propagation])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "auto-fill",
+      "api": "setMetaObjectHandler / getMetaObjectHandler",
+      "signature": "setMetaObjectHandler({ insert?, update? })",
+      "missing": "has signature with 1 arg(s) [{ insert?, update? }] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "{ insert"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "auto-fill",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { fillCreateTime, fillUpdateTime, fillCreateBy, fillUpdateBy } to configureOrm but fields not in section params/configs: [fillCreateTime, fillUpdateTime, fillCreateBy, fillUpdateBy]",
+      "keys": [
+        "fillCreateTime",
+        "fillUpdateTime",
+        "fillCreateBy",
+        "fillUpdateBy"
+      ],
+      "allKeys": [
+        "fillCreateTime",
+        "fillUpdateTime",
+        "fillCreateBy",
+        "fillUpdateBy"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "optimistic-lock",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { optimisticLock, versionField } to configureOrm but fields not in section params/configs: [optimisticLock, versionField]",
+      "keys": [
+        "optimisticLock",
+        "versionField"
+      ],
+      "allKeys": [
+        "optimisticLock",
+        "versionField"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "db",
+      "api": "Db.register",
+      "missing": "functionalExample passes { type, host, database, user, password } to Db.register but fields not in section params/configs: [type, host, database, user, password]",
+      "keys": [
+        "type",
+        "host",
+        "database",
+        "user",
+        "password"
+      ],
+      "allKeys": [
+        "type",
+        "host",
+        "database",
+        "user",
+        "password"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "setMetaObjectHandler",
+      "signature": "setMetaObjectHandler({ insert?, update? })",
+      "missing": "has signature with 1 arg(s) [{ insert?, update? }] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "{ insert"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "configureSqlLog",
+      "signature": "configureSqlLog({ enabled, format?, parts?, level? })",
+      "missing": "has signature with 1 arg(s) [{ enabled, format?, parts?, level? }] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "{ enabled, format"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { logicDelete, sqlLog, batchInsertSize } to configureOrm but fields not in section params/configs: [logicDelete, sqlLog, batchInsertSize]",
+      "keys": [
+        "logicDelete",
+        "sqlLog",
+        "batchInsertSize"
+      ],
+      "allKeys": [
+        "logicDelete",
+        "sqlLog",
+        "batchInsertSize"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "configureSqlLog",
+      "missing": "functionalExample passes { enabled, level, parts, format } to configureSqlLog but fields not in section params/configs: [enabled, level, parts, format]",
+      "keys": [
+        "enabled",
+        "level",
+        "parts",
+        "format"
+      ],
+      "allKeys": [
+        "enabled",
+        "level",
+        "parts",
+        "format"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "decorators",
+      "api": "@Bean",
+      "signature": "@Bean(token?: BeanToken | { token })",
+      "missing": "has signature with 1 arg(s) [token?: BeanToken | { token }] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "token"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "mapper-service",
+      "api": "svc.selectPage",
+      "missing": "functionalExample passes { current, size } to svc.selectPage but fields not in section params/configs: [current, size]",
+      "keys": [
+        "current",
+        "size"
+      ],
+      "allKeys": [
+        "current",
+        "size"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "validateApi",
+      "sectionId": "apis",
+      "api": "@Email / @Phone",
+      "signature": "@Email(message?) / @Phone({ locale?, message? })",
+      "missing": "has signature with 1 arg(s) [message?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "message"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "exceptionApi",
+      "sectionId": "apis",
+      "api": "@ExceptionHandler",
+      "signature": "@ExceptionHandler(errorType?: Function)",
+      "missing": "has signature with 1 arg(s) [errorType?: Function] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "errorType"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "jsonApi",
+      "sectionId": "apis",
+      "api": "@JsonFormat",
+      "signature": "@JsonFormat({ pattern?, timezone? })",
+      "missing": "has signature with 1 arg(s) [{ pattern?, timezone? }] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "{ pattern"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "rest.ts",
+      "page": "jsonApi",
+      "sectionId": "apis",
+      "api": "ObjectMapper.configure",
+      "missing": "functionalExample passes { dateFormat, include, deep } to ObjectMapper.configure but fields not in section params/configs: [dateFormat, include, deep]",
+      "keys": [
+        "dateFormat",
+        "include",
+        "deep"
+      ],
+      "allKeys": [
+        "dateFormat",
+        "include",
+        "deep"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "rest.ts",
+      "page": "logApi",
+      "sectionId": "apis",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { log } to Application.POST but fields not in section params/configs: [log]",
+      "keys": [
+        "log"
+      ],
+      "allKeys": [
+        "log"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "rest.ts",
+      "page": "loggerApi",
+      "sectionId": "apis",
+      "api": "log.info",
+      "missing": "functionalExample passes { userId } to log.info but fields not in section params/configs: [userId]",
+      "keys": [
+        "userId"
+      ],
+      "allKeys": [
+        "userId"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.scheduleJob",
+      "missing": "functionalExample passes { id, title, cron, beanName, status } to ScheduleManager.scheduleJob but fields not in section params/configs: [id, title, cron, beanName, status]",
+      "keys": [
+        "id",
+        "title",
+        "cron",
+        "beanName",
+        "status"
+      ],
+      "allKeys": [
+        "id",
+        "title",
+        "cron",
+        "beanName",
+        "status"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.runOnce",
+      "missing": "functionalExample passes { id, cron, beanName } to ScheduleManager.runOnce but fields not in section params/configs: [id, cron, beanName]",
+      "keys": [
+        "id",
+        "cron",
+        "beanName"
+      ],
+      "allKeys": [
+        "id",
+        "cron",
+        "beanName"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "rest.ts",
+      "page": "utilsApi",
+      "sectionId": "apis",
+      "api": "ResponseData.error",
+      "signature": "error<T>(message?, data?, code?)",
+      "missing": "has signature with 3 arg(s) [message?, data?, code?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "message",
+        "data",
+        "code"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/application.ts",
+      "page": "applicationApi",
+      "sectionId": "lifecycle",
+      "api": "Log",
+      "missing": "functionalExample passes { writer } to Log but fields not in section params/configs: [writer]",
+      "keys": [
+        "writer"
+      ],
+      "allKeys": [
+        "writer"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/application.ts",
+      "page": "applicationApi",
+      "sectionId": "scan-registry",
+      "api": "Auth",
+      "missing": "functionalExample passes { redis } to Auth but fields not in section params/configs: [redis]",
+      "keys": [
+        "redis"
+      ],
+      "allKeys": [
+        "redis"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/application.ts",
+      "page": "applicationApi",
+      "sectionId": "routes",
+      "api": "@GetMapping / @PostMapping / @PutMapping / @DeleteMapping",
+      "signature": "@GetMapping(path?: string, option?: RouteOption)",
+      "missing": "has signature with 2 arg(s) [path?: string, option?: RouteOption] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "path",
+        "option"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/application.ts",
+      "page": "applicationApi",
+      "sectionId": "auth-decorators",
+      "api": "Application.GET",
+      "missing": "functionalExample passes { auth } to Application.GET but fields not in section params/configs: [auth]",
+      "keys": [
+        "auth"
+      ],
+      "allKeys": [
+        "auth"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/application.ts",
+      "page": "applicationApi",
+      "sectionId": "cross-cutting",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { validate, log, rateLimit, repeatSubmit, flux, raw } to Application.POST but fields not in section params/configs: [validate, log, rateLimit, repeatSubmit, flux, raw]",
+      "keys": [
+        "validate",
+        "log",
+        "rateLimit",
+        "repeatSubmit",
+        "flux",
+        "raw"
+      ],
+      "allKeys": [
+        "validate",
+        "log",
+        "rateLimit",
+        "repeatSubmit",
+        "flux",
+        "raw"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/application.ts",
+      "page": "applicationConfig",
+      "sectionId": "route-option",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { auth, rateLimit, repeatSubmit, log, validate } to Application.POST but fields not in section params/configs: [auth]",
+      "keys": [
+        "auth"
+      ],
+      "allKeys": [
+        "auth",
+        "rateLimit",
+        "repeatSubmit",
+        "log",
+        "validate"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "middleware",
+      "api": "Auth",
+      "signature": "Auth(options?: AuthOptions): RequestHandler",
+      "missing": "has signature with 1 arg(s) [options?: AuthOptions] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "api": "AuthUtil.logout",
+      "signature": "logout(token?: string): Promise<void>",
+      "missing": "has signature with 1 arg(s) [token?: string] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "token"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "api": "AuthUtil.login",
+      "missing": "functionalExample passes { username, device } to AuthUtil.login but fields not in section params/configs: [username, device]",
+      "keys": [
+        "username",
+        "device"
+      ],
+      "allKeys": [
+        "username",
+        "device"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "api": "AuthUtil.login",
+      "missing": "functionalExample passes { roles, permissions, username, device, timeout } to AuthUtil.login but fields not in section params/configs: [roles, permissions, username, device, timeout]",
+      "keys": [
+        "roles",
+        "permissions",
+        "username",
+        "device",
+        "timeout"
+      ],
+      "allKeys": [
+        "roles",
+        "permissions",
+        "username",
+        "device",
+        "timeout"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "session-read",
+      "api": "AuthUtil.loadSession",
+      "missing": "functionalExample passes { touch } to AuthUtil.loadSession but fields not in section params/configs: [touch]",
+      "keys": [
+        "touch"
+      ],
+      "allKeys": [
+        "touch"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/auth.ts",
+      "page": "authApi",
+      "sectionId": "rbac",
+      "api": "Application.GET",
+      "missing": "functionalExample passes { auth } to Application.GET but fields not in section params/configs: [auth]",
+      "keys": [
+        "auth"
+      ],
+      "allKeys": [
+        "auth"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "api": "Redis.configure",
+      "signature": "configure(config?: RedisConfig): void",
+      "missing": "has signature with 1 arg(s) [config?: RedisConfig] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "config"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "api": "Redis.connect",
+      "signature": "connect(config?: RedisConfig): Promise<void>",
+      "missing": "has signature with 1 arg(s) [config?: RedisConfig] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "config"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "api": "Redis.configure",
+      "missing": "functionalExample passes { host, keyPrefix } to Redis.configure but fields not in section params/configs: [host, keyPrefix]",
+      "keys": [
+        "host",
+        "keyPrefix"
+      ],
+      "allKeys": [
+        "host",
+        "keyPrefix"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "Redis.setJSON",
+      "missing": "functionalExample passes { name } to Redis.setJSON but fields not in section params/configs: [name]",
+      "keys": [
+        "name"
+      ],
+      "allKeys": [
+        "name"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-structures",
+      "api": "pipeline",
+      "signature": "pipeline(fn: (multi) => void): Promise<unknown[]>",
+      "missing": "has signature with 1 arg(s) [fn: (multi) => void] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "fn"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "rate-repeat",
+      "api": "@RateLimiter",
+      "signature": "@RateLimiter(option?: RateLimitOption)",
+      "missing": "signature args undocumented in params: option?: RateLimitOption (have: [time, count, type, mode, key])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "option"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "rate-repeat",
+      "api": "@RepeatSubmit",
+      "signature": "@RepeatSubmit(option?: RepeatSubmitOption)",
+      "missing": "signature args undocumented in params: option?: RepeatSubmitOption (have: [interval, message])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "option"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "rate-repeat",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { rateLimit, repeatSubmit } to Application.POST but fields not in section params/configs: [rateLimit, repeatSubmit]",
+      "keys": [
+        "rateLimit",
+        "repeatSubmit"
+      ],
+      "allKeys": [
+        "rateLimit",
+        "repeatSubmit"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "cache",
+      "api": "@Cacheable",
+      "signature": "@Cacheable(option?: CacheableOption)",
+      "missing": "signature args undocumented in params: option?: CacheableOption (have: [key, ttl, keyGenerator])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "option"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "cache",
+      "api": "@CacheEvict",
+      "signature": "@CacheEvict(option?: CacheEvictOption)",
+      "missing": "signature args undocumented in params: option?: CacheEvictOption (have: [key, keyGenerator, allEntries])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "option"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "RLock.lock",
+      "signature": "lock(leaseTimeMs?: number): Promise<void>",
+      "missing": "has signature with 1 arg(s) [leaseTimeMs?: number] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "leaseTimeMs"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "RLock.tryLock",
+      "signature": "tryLock(waitTimeMs?, leaseTimeMs?): Promise<boolean>",
+      "missing": "has signature with 2 arg(s) [waitTimeMs?, leaseTimeMs?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "waitTimeMs",
+        "leaseTimeMs"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "id-type",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { idType } to configureOrm but fields not in section params/configs: [idType]",
+      "keys": [
+        "idType"
+      ],
+      "allKeys": [
+        "idType"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "select-method",
+      "api": "@Select",
+      "signature": "@Select(sql: string, options?: SelectOptions)",
+      "missing": "signature args undocumented in params: options?: SelectOptions (have: [sql, options.datasource, options.db])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "insert-decorator",
+      "api": "@Insert",
+      "signature": "@Insert(sql: string, options?: SqlExecuteOptions)",
+      "missing": "signature args undocumented in params: options?: SqlExecuteOptions (have: [sql, options.datasource, options.db])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "update-decorator",
+      "api": "@Update",
+      "signature": "@Update(sql: string, options?: SqlExecuteOptions)",
+      "missing": "signature args undocumented in params: options?: SqlExecuteOptions (have: [sql, options.datasource, options.db])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "delete-decorator",
+      "api": "@Delete",
+      "signature": "@Delete(sql: string, options?: SqlExecuteOptions)",
+      "missing": "signature args undocumented in params: options?: SqlExecuteOptions (have: [sql, options.datasource, options.db])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "field-select",
+      "api": "@Select (property)",
+      "signature": "@Select(sql, options?: FieldSelectOptions & SqlExecuteOptions)",
+      "missing": "signature args undocumented in params: options?: FieldSelectOptions & SqlExecuteOptions (have: [sql, many, column, depth, eager, datasource / db])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "api": "mapper.selectList",
+      "missing": "functionalExample passes { relations } to mapper.selectList but fields not in section params/configs: [relations]",
+      "keys": [
+        "relations"
+      ],
+      "allKeys": [
+        "relations"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "api": "mapper.selectList",
+      "missing": "functionalExample passes { relations } to mapper.selectList but fields not in section params/configs: [relations]",
+      "keys": [
+        "relations"
+      ],
+      "allKeys": [
+        "relations"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "api": "hydrateRelations",
+      "missing": "functionalExample passes { relations } to hydrateRelations but fields not in section params/configs: [relations]",
+      "keys": [
+        "relations"
+      ],
+      "allKeys": [
+        "relations"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "@Mapper",
+      "signature": "@Mapper(tableOrEntity, idFieldOrOptions?)",
+      "missing": "signature args undocumented in params: idFieldOrOptions? (have: [tableOrEntity, options])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "idFieldOrOptions"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectOne",
+      "signature": "selectOne(wrapper?, options?)",
+      "missing": "has signature with 2 arg(s) [wrapper?, options?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "wrapper",
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectList",
+      "signature": "selectList(wrapper?, options?)",
+      "missing": "has signature with 2 arg(s) [wrapper?, options?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "wrapper",
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectCount",
+      "signature": "selectCount(wrapper?)",
+      "missing": "has signature with 1 arg(s) [wrapper?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "wrapper"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { sqlLog, logicDelete } to configureOrm but fields not in section params/configs: [sqlLog, logicDelete]",
+      "keys": [
+        "sqlLog",
+        "logicDelete"
+      ],
+      "allKeys": [
+        "sqlLog",
+        "logicDelete"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "table",
+      "missing": "functionalExample passes { entity, logicDelete, updateNullStrategy } to table but fields not in section params/configs: [entity, logicDelete, updateNullStrategy]",
+      "keys": [
+        "entity",
+        "logicDelete",
+        "updateNullStrategy"
+      ],
+      "allKeys": [
+        "entity",
+        "logicDelete",
+        "updateNullStrategy"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "mapper.selectPage",
+      "missing": "functionalExample passes { current, size } to mapper.selectPage but fields not in section params/configs: [current, size]",
+      "keys": [
+        "current",
+        "size"
+      ],
+      "allKeys": [
+        "current",
+        "size"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "mapper.saveBatch",
+      "missing": "functionalExample passes { username } to mapper.saveBatch but fields not in section params/configs: [username]",
+      "keys": [
+        "username"
+      ],
+      "allKeys": [
+        "username"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "mapper.saveBatch",
+      "missing": "functionalExample passes { username } to mapper.saveBatch but fields not in section params/configs: [username]",
+      "keys": [
+        "username"
+      ],
+      "allKeys": [
+        "username"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "mapper.updateBatch",
+      "missing": "functionalExample passes { id, username } to mapper.updateBatch but fields not in section params/configs: [id, username]",
+      "keys": [
+        "id",
+        "username"
+      ],
+      "allKeys": [
+        "id",
+        "username"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "query-wrapper",
+      "api": "Constructor",
+      "signature": "new QueryWrapper(options?) | QueryWrapper.forDatasource(name)",
+      "missing": "has signature with 1 arg(s) [options?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-search",
+      "api": "@TableSearch",
+      "signature": "@TableSearch(options? | OperType)",
+      "missing": "signature args undocumented in params: options? | OperType (have: [column, operator])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "transaction",
+      "api": "@Transactional",
+      "signature": "@Transactional(options?: { datasource?: string; propagation?: TransactionPropagation })",
+      "missing": "signature args undocumented in params: options?: { datasource?: string; propagation?: TransactionPropagation } (have: [datasource, propagation])",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "options"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "auto-fill",
+      "api": "setMetaObjectHandler / getMetaObjectHandler",
+      "signature": "setMetaObjectHandler({ insert?, update? })",
+      "missing": "has signature with 1 arg(s) [{ insert?, update? }] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "{ insert"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "auto-fill",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { fillCreateTime, fillUpdateTime, fillCreateBy, fillUpdateBy } to configureOrm but fields not in section params/configs: [fillCreateTime, fillUpdateTime, fillCreateBy, fillUpdateBy]",
+      "keys": [
+        "fillCreateTime",
+        "fillUpdateTime",
+        "fillCreateBy",
+        "fillUpdateBy"
+      ],
+      "allKeys": [
+        "fillCreateTime",
+        "fillUpdateTime",
+        "fillCreateBy",
+        "fillUpdateBy"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "optimistic-lock",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { optimisticLock, versionField } to configureOrm but fields not in section params/configs: [optimisticLock, versionField]",
+      "keys": [
+        "optimisticLock",
+        "versionField"
+      ],
+      "allKeys": [
+        "optimisticLock",
+        "versionField"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "db",
+      "api": "Db.register",
+      "missing": "functionalExample passes { type, host, database, user, password } to Db.register but fields not in section params/configs: [type, host, database, user, password]",
+      "keys": [
+        "type",
+        "host",
+        "database",
+        "user",
+        "password"
+      ],
+      "allKeys": [
+        "type",
+        "host",
+        "database",
+        "user",
+        "password"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "setMetaObjectHandler",
+      "signature": "setMetaObjectHandler({ insert?, update? })",
+      "missing": "has signature with 1 arg(s) [{ insert?, update? }] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "{ insert"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "configureSqlLog",
+      "signature": "configureSqlLog({ enabled, format?, parts?, level? })",
+      "missing": "has signature with 1 arg(s) [{ enabled, format?, parts?, level? }] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "{ enabled, format"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { logicDelete, sqlLog, batchInsertSize } to configureOrm but fields not in section params/configs: [logicDelete, sqlLog, batchInsertSize]",
+      "keys": [
+        "logicDelete",
+        "sqlLog",
+        "batchInsertSize"
+      ],
+      "allKeys": [
+        "logicDelete",
+        "sqlLog",
+        "batchInsertSize"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "configureSqlLog",
+      "missing": "functionalExample passes { enabled, level, parts, format } to configureSqlLog but fields not in section params/configs: [enabled, level, parts, format]",
+      "keys": [
+        "enabled",
+        "level",
+        "parts",
+        "format"
+      ],
+      "allKeys": [
+        "enabled",
+        "level",
+        "parts",
+        "format"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/service.ts",
+      "page": "serviceApi",
+      "sectionId": "decorators",
+      "api": "@Bean",
+      "signature": "@Bean(token?: BeanToken | { token })",
+      "missing": "has signature with 1 arg(s) [token?: BeanToken | { token }] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "token"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/service.ts",
+      "page": "serviceApi",
+      "sectionId": "mapper-service",
+      "api": "svc.selectPage",
+      "missing": "functionalExample passes { current, size } to svc.selectPage but fields not in section params/configs: [current, size]",
+      "keys": [
+        "current",
+        "size"
+      ],
+      "allKeys": [
+        "current",
+        "size"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "validateApi",
+      "sectionId": "apis",
+      "api": "@Email / @Phone",
+      "signature": "@Email(message?) / @Phone({ locale?, message? })",
+      "missing": "has signature with 1 arg(s) [message?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "message"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "exceptionApi",
+      "sectionId": "apis",
+      "api": "@ExceptionHandler",
+      "signature": "@ExceptionHandler(errorType?: Function)",
+      "missing": "has signature with 1 arg(s) [errorType?: Function] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "errorType"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "jsonApi",
+      "sectionId": "apis",
+      "api": "@JsonFormat",
+      "signature": "@JsonFormat({ pattern?, timezone? })",
+      "missing": "has signature with 1 arg(s) [{ pattern?, timezone? }] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "{ pattern"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/rest.ts",
+      "page": "jsonApi",
+      "sectionId": "apis",
+      "api": "ObjectMapper.configure",
+      "missing": "functionalExample passes { dateFormat, include, deep } to ObjectMapper.configure but fields not in section params/configs: [dateFormat, include, deep]",
+      "keys": [
+        "dateFormat",
+        "include",
+        "deep"
+      ],
+      "allKeys": [
+        "dateFormat",
+        "include",
+        "deep"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/rest.ts",
+      "page": "logApi",
+      "sectionId": "apis",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { log } to Application.POST but fields not in section params/configs: [log]",
+      "keys": [
+        "log"
+      ],
+      "allKeys": [
+        "log"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/rest.ts",
+      "page": "loggerApi",
+      "sectionId": "apis",
+      "api": "log.info",
+      "missing": "functionalExample passes { userId } to log.info but fields not in section params/configs: [userId]",
+      "keys": [
+        "userId"
+      ],
+      "allKeys": [
+        "userId"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.scheduleJob",
+      "missing": "functionalExample passes { id, title, cron, beanName, status } to ScheduleManager.scheduleJob but fields not in section params/configs: [id, title, cron, beanName, status]",
+      "keys": [
+        "id",
+        "title",
+        "cron",
+        "beanName",
+        "status"
+      ],
+      "allKeys": [
+        "id",
+        "title",
+        "cron",
+        "beanName",
+        "status"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "functionalExample-options-gap",
+      "file": "en/rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.runOnce",
+      "missing": "functionalExample passes { id, cron, beanName } to ScheduleManager.runOnce but fields not in section params/configs: [id, cron, beanName]",
+      "keys": [
+        "id",
+        "cron",
+        "beanName"
+      ],
+      "allKeys": [
+        "id",
+        "cron",
+        "beanName"
+      ]
+    },
+    {
+      "severity": "medium",
+      "kind": "signature-params-gap",
+      "file": "en/rest.ts",
+      "page": "utilsApi",
+      "sectionId": "apis",
+      "api": "ResponseData.error",
+      "signature": "error<T>(message?, data?, code?)",
+      "missing": "has signature with 3 arg(s) [message?, data?, code?] but no params",
+      "requiredMissing": [],
+      "optionalMissing": [
+        "message",
+        "data",
+        "code"
+      ]
+    }
+  ],
+  "lowInformational": [
+    {
+      "severity": "low",
+      "kind": "no-args-or-constant",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "sql-decorators-overview",
+      "api": "SqlExecuteOptions",
+      "missing": "signature without call args: \"{ datasource?: string; db?: DbType | string }\" (OK if constant/property)",
+      "note": "informational"
+    },
+    {
+      "severity": "low",
+      "kind": "no-args-or-constant",
+      "file": "en/orm.ts",
+      "page": "ormApi",
+      "sectionId": "sql-decorators-overview",
+      "api": "SqlExecuteOptions",
+      "missing": "signature without call args: \"{ datasource?: string; db?: DbType | string }\" (OK if constant/property)",
+      "note": "informational"
+    }
+  ]
+}

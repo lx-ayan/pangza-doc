@@ -1,0 +1,2428 @@
+{
+  "summary": {
+    "high": 61,
+    "medium": 53,
+    "low": 10,
+    "okApis": 196,
+    "totalApis": 276
+  },
+  "okByPage": {
+    "application.ts::applicationApi": {
+      "ok": 25,
+      "total": 27,
+      "key": "Application-api"
+    },
+    "application.ts::applicationConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "Application-config"
+    },
+    "auth.ts::authApi": {
+      "ok": 13,
+      "total": 22,
+      "key": "Auth-api"
+    },
+    "auth.ts::authConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "Auth-config"
+    },
+    "redis.ts::redisApi": {
+      "ok": 36,
+      "total": 52,
+      "key": "Redis-api"
+    },
+    "redis.ts::redisConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "Redis-config"
+    },
+    "orm.ts::ormApi": {
+      "ok": 67,
+      "total": 99,
+      "key": "ORM-api"
+    },
+    "orm.ts::ormConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "ORM-config"
+    },
+    "service.ts::serviceApi": {
+      "ok": 4,
+      "total": 12,
+      "key": "Service-api"
+    },
+    "service.ts::serviceConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "Service-config"
+    },
+    "rest.ts::validateApi": {
+      "ok": 5,
+      "total": 8,
+      "key": "Validate-api"
+    },
+    "rest.ts::validateConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "Validate-config"
+    },
+    "rest.ts::exceptionApi": {
+      "ok": 6,
+      "total": 8,
+      "key": "Exception-api"
+    },
+    "rest.ts::exceptionConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "Exception-config"
+    },
+    "rest.ts::jsonApi": {
+      "ok": 6,
+      "total": 8,
+      "key": "Json-api"
+    },
+    "rest.ts::jsonConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "Json-config"
+    },
+    "rest.ts::logApi": {
+      "ok": 9,
+      "total": 9,
+      "key": "Log-api"
+    },
+    "rest.ts::logConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "Log-config"
+    },
+    "rest.ts::loggerApi": {
+      "ok": 4,
+      "total": 4,
+      "key": "Logger-api"
+    },
+    "rest.ts::loggerConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "Logger-config"
+    },
+    "rest.ts::configApi": {
+      "ok": 10,
+      "total": 10,
+      "key": "config-api"
+    },
+    "rest.ts::configConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "config-config"
+    },
+    "rest.ts::scheduleApi": {
+      "ok": 3,
+      "total": 6,
+      "key": "schedule-api"
+    },
+    "rest.ts::scheduleConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "schedule-config"
+    },
+    "rest.ts::encryptApi": {
+      "ok": 3,
+      "total": 3,
+      "key": "encrypt-api"
+    },
+    "rest.ts::encryptConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "encrypt-config"
+    },
+    "rest.ts::langchainApi": {
+      "ok": 0,
+      "total": 1,
+      "key": "langchain-api"
+    },
+    "rest.ts::langchainConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "langchain-config"
+    },
+    "rest.ts::typesApi": {
+      "ok": 1,
+      "total": 1,
+      "key": "types-api"
+    },
+    "rest.ts::typesConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "types-config"
+    },
+    "rest.ts::utilsApi": {
+      "ok": 4,
+      "total": 6,
+      "key": "utils-api"
+    },
+    "rest.ts::utilsConfig": {
+      "ok": 0,
+      "total": 0,
+      "key": "utils-config"
+    }
+  },
+  "high": [
+    {
+      "severity": "high",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "scan-registry",
+      "api": "Application.static",
+      "signature": "static static(url: string | string[]): typeof Application",
+      "missing": "has signature with 1 arg(s) [url: string | string[]] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "api": "AuthUtil.login",
+      "signature": "login(loginId, rolesOrOpts?, permissions?, profile?): Promise<string>",
+      "missing": "has signature with 4 arg(s) [loginId, rolesOrOpts?, permissions?, profile?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "session-read",
+      "api": "AuthUtil.loadSession",
+      "signature": "loadSession(token, { touch? }): Promise<AuthSession | null>",
+      "missing": "has signature with 2 arg(s) [token, { touch? }] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "rbac",
+      "api": "AuthUtil.hasRole / hasPermission",
+      "signature": "hasRole(role: string) / hasPermission(permission: string)",
+      "missing": "has signature with 1 arg(s) [role: string] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "rbac",
+      "api": "AuthUtil.checkRole / checkPermission",
+      "signature": "checkRole(role: string) / checkPermission(permission: string)",
+      "missing": "has signature with 1 arg(s) [role: string] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "token-api",
+      "api": "generateStyleToken",
+      "signature": "generateStyleToken(style: TokenStyle): string",
+      "missing": "has signature with 1 arg(s) [style: TokenStyle] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "token-api",
+      "api": "createAuthToken",
+      "signature": "createAuthToken(options, payload): Promise<string>",
+      "missing": "has signature with 2 arg(s) [options, payload] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "token-api",
+      "api": "verifyAuthToken",
+      "signature": "verifyAuthToken(options, token): boolean",
+      "missing": "has signature with 2 arg(s) [options, token] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "api": "Redis.key",
+      "signature": "key(raw: string): string",
+      "missing": "has signature with 1 arg(s) [raw: string] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "set / get / del / exists",
+      "signature": "set(key, value, ttlSeconds?) / get(key) / del(...keys) / exists(key)",
+      "missing": "has signature with 3 arg(s) [key, value, ttlSeconds?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "setJSON / getJSON",
+      "signature": "setJSON(key, value, ttlSeconds?) / getJSON<T>(key)",
+      "missing": "has signature with 3 arg(s) [key, value, ttlSeconds?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "setPx / setJSONPx",
+      "signature": "setPx(key, value, ttlMs) / setJSONPx(key, value, ttlMs)",
+      "missing": "has signature with 3 arg(s) [key, value, ttlMs] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "api": "deleteByPrefix",
+      "signature": "deleteByPrefix(prefix: string): Promise<number>",
+      "missing": "has signature with 1 arg(s) [prefix: string] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "simple-lock",
+      "api": "tryLock",
+      "signature": "tryLock(key, option?: TryLockOption): Promise<LockHandle | null>",
+      "missing": "key",
+      "kind": "signature-params-gap",
+      "paramCount": 2
+    },
+    {
+      "severity": "high",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "simple-lock",
+      "api": "withLock",
+      "signature": "withLock(key, fn, option?: WithLockOption): Promise<T>",
+      "missing": "key; fn",
+      "kind": "signature-params-gap",
+      "paramCount": 1
+    },
+    {
+      "severity": "high",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "simple-lock",
+      "api": "rateLimit / rateLimitSliding",
+      "signature": "rateLimit(key, windowSec, count) / rateLimitSliding(key, windowMs, count)",
+      "missing": "has signature with 3 arg(s) [key, windowSec, count] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "getLock",
+      "signature": "getLock(name: string): RLock",
+      "missing": "has signature with 1 arg(s) [name: string] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "getMultiLock",
+      "signature": "getMultiLock(...locks: RLock[]): RLock",
+      "missing": "has signature with 1 arg(s) [...locks: RLock[]] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "Redisson.withLock",
+      "signature": "withLock(name, fn, leaseMs?): Promise<T>",
+      "missing": "has signature with 3 arg(s) [name, fn, leaseMs?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-name",
+      "api": "getTableName",
+      "signature": "getTableName(entity: Ctor): string | undefined",
+      "missing": "has signature with 1 arg(s) [entity: Ctor] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "field-select",
+      "api": "hydrateFieldSelects",
+      "signature": "hydrateFieldSelects(Entity, rows, options?)",
+      "missing": "has signature with 3 arg(s) [Entity, rows, options?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "table / useTable / clearTableCache",
+      "signature": "table(name, MapperTableOptions?)",
+      "missing": "has signature with 2 arg(s) [name, MapperTableOptions?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectById",
+      "signature": "selectById(id, options?: SelectQueryOptions)",
+      "missing": "has signature with 2 arg(s) [id, options?: SelectQueryOptions] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectPage",
+      "signature": "selectPage(page, wrapper?, options?)",
+      "missing": "has signature with 3 arg(s) [page, wrapper?, options?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "insert",
+      "signature": "insert(entity)",
+      "missing": "has signature with 1 arg(s) [entity] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "saveBatch",
+      "signature": "saveBatch(entities)",
+      "missing": "has signature with 1 arg(s) [entities] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "saveOrUpdate",
+      "signature": "saveOrUpdate(entity)",
+      "missing": "has signature with 1 arg(s) [entity] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "updateById",
+      "signature": "updateById(entity)",
+      "missing": "has signature with 1 arg(s) [entity] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "update",
+      "signature": "update(entity, wrapper)",
+      "missing": "has signature with 2 arg(s) [entity, wrapper] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "updateBatch",
+      "signature": "updateBatch(entities)",
+      "missing": "has signature with 1 arg(s) [entities] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-search",
+      "api": "getQueryWrapper",
+      "signature": "getQueryWrapper(form, DtoClass, consumer?)",
+      "missing": "has signature with 3 arg(s) [form, DtoClass, consumer?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-search",
+      "api": "getQueryWrapperAndPage",
+      "signature": "getQueryWrapperAndPage(form, Dto, pageNum?, pageSize?, consumer?)",
+      "missing": "has signature with 5 arg(s) [form, Dto, pageNum?, pageSize?, consumer?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "transaction",
+      "api": "Db.transaction / Db.transactionOn",
+      "signature": "Db.transaction(fn) / Db.transactionOn(name, fn, { propagation? })",
+      "missing": "has signature with 1 arg(s) [fn] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "auto-fill",
+      "api": "setMetaObjectHandler / getMetaObjectHandler",
+      "signature": "setMetaObjectHandler({ insert?, update? })",
+      "missing": "has signature with 1 arg(s) [{ insert?, update? }] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "db",
+      "api": "Db.register",
+      "signature": "Db.register(name, config) | Db.register(config)",
+      "missing": "has signature with 2 arg(s) [name, config] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "db",
+      "api": "Db.query / Db.queryOn",
+      "signature": "Db.query(sql, params?) / Db.queryOn(name, sql, params?)",
+      "missing": "has signature with 2 arg(s) [sql, params?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "xml",
+      "api": "@MapperXml",
+      "signature": "@MapperXml(\"namespace\")",
+      "missing": "has signature with 1 arg(s) [\"namespace\"] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "api": "assertIdent",
+      "signature": "assertIdent(name: string): string",
+      "missing": "has signature with 1 arg(s) [name: string] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "api": "assertSafeUint",
+      "signature": "assertSafeUint(value, label?): number",
+      "missing": "has signature with 2 arg(s) [value, label?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "api": "escapeLike",
+      "signature": "escapeLike(value: string): string",
+      "missing": "has signature with 1 arg(s) [value: string] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "api": "assertSafeLastSql",
+      "signature": "assertSafeLastSql(sql: string): string",
+      "missing": "has signature with 1 arg(s) [sql: string] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "dialect",
+      "api": "getDialect",
+      "signature": "getDialect(\"mysql\"|\"postgresql\"|\"sqlserver\"|别名): Dialect",
+      "missing": "has signature with 1 arg(s) [\"mysql\"|\"postgresql\"|\"sqlserver\"|别名] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "setMetaObjectHandler",
+      "signature": "setMetaObjectHandler({ insert?, update? })",
+      "missing": "has signature with 1 arg(s) [{ insert?, update? }] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "configureSqlLog",
+      "signature": "configureSqlLog({ enabled, format?, parts?, level? })",
+      "missing": "has signature with 1 arg(s) [{ enabled, format?, parts?, level? }] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "container",
+      "api": "Container.bindClass",
+      "signature": "bindClass(Ctor): void",
+      "missing": "has signature with 1 arg(s) [Ctor] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "container",
+      "api": "Container.bindAlias",
+      "signature": "bindAlias(alias: string, Ctor): void",
+      "missing": "has signature with 2 arg(s) [alias: string, Ctor] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "container",
+      "api": "Container.get / has",
+      "signature": "get<T>(token): T / has(token): boolean",
+      "missing": "has signature with 1 arg(s) [token] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "decorators",
+      "api": "@Resource",
+      "signature": "@Resource(Type | string | symbol)",
+      "missing": "has signature with 1 arg(s) [Type | string | symbol] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "decorators",
+      "api": "@Inject",
+      "signature": "@Inject(Token)",
+      "missing": "has signature with 1 arg(s) [Token] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "mapper-service",
+      "api": "@Mapper",
+      "signature": "@Mapper(table | Entity, idField | options?)",
+      "missing": "has signature with 2 arg(s) [table | Entity, idField | options?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "mapper-service",
+      "api": "@Service",
+      "signature": "@Service(MapperClass)",
+      "missing": "has signature with 1 arg(s) [MapperClass] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "rest.ts",
+      "page": "validateApi",
+      "sectionId": "apis",
+      "api": "@Min / @Max",
+      "signature": "@Min(n, message?) / @Max(n, message?)",
+      "missing": "has signature with 2 arg(s) [n, message?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "rest.ts",
+      "page": "validateApi",
+      "sectionId": "apis",
+      "api": "@Custom",
+      "signature": "@Custom(fn, message?)",
+      "missing": "has signature with 2 arg(s) [fn, message?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "rest.ts",
+      "page": "exceptionApi",
+      "sectionId": "apis",
+      "api": "registerHandler",
+      "signature": "registerHandler(errorType, handler)",
+      "missing": "has signature with 2 arg(s) [errorType, handler] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "rest.ts",
+      "page": "jsonApi",
+      "sectionId": "apis",
+      "api": "@JsonFormat",
+      "signature": "@JsonFormat({ pattern?, timezone? })",
+      "missing": "has signature with 1 arg(s) [{ pattern?, timezone? }] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "rest.ts",
+      "page": "jsonApi",
+      "sectionId": "apis",
+      "api": "@JsonInclude",
+      "signature": "@JsonInclude(JsonIncludeType)",
+      "missing": "has signature with 1 arg(s) [JsonIncludeType] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.scheduleJob",
+      "signature": "scheduleJob(entity: ScheduleJobEntity): void",
+      "missing": "has signature with 1 arg(s) [entity: ScheduleJobEntity] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.unschedule",
+      "signature": "unschedule(id: string): void",
+      "missing": "has signature with 1 arg(s) [id: string] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.runOnce",
+      "signature": "runOnce(entity | beanName): Promise<void>",
+      "missing": "has signature with 1 arg(s) [entity | beanName] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "rest.ts",
+      "page": "langchainApi",
+      "sectionId": "status",
+      "api": "AiModel",
+      "signature": "AiModel(model: string)",
+      "missing": "has signature with 1 arg(s) [model: string] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "high",
+      "file": "rest.ts",
+      "page": "utilsApi",
+      "sectionId": "apis",
+      "api": "ResponseData.success",
+      "signature": "success<T>(data: T, message?: string)",
+      "missing": "has signature with 2 arg(s) [data: T, message?: string] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    }
+  ],
+  "medium": [
+    {
+      "severity": "medium",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "lifecycle",
+      "api": "Auth",
+      "missing": "functionalExample passes { redis } to Auth; undocumented in section params/configs: [redis]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "redis"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "lifecycle",
+      "api": "Log",
+      "missing": "functionalExample passes { writer } to Log; undocumented in section params/configs: [writer]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "writer"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "scan-registry",
+      "api": "Auth",
+      "missing": "functionalExample passes { redis } to Auth; undocumented in section params/configs: [redis]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "redis"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "routes",
+      "api": "@GetMapping / @PostMapping / @PutMapping / @DeleteMapping",
+      "signature": "@GetMapping(path?: string, option?: RouteOption)",
+      "missing": "has signature with 2 arg(s) [path?: string, option?: RouteOption] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "routes",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { ok } to Application.POST; undocumented in section params/configs: [ok]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "ok"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "routes",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { auth, log } to Application.POST; undocumented in section params/configs: [auth, log]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "auth",
+        "log"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "auth-decorators",
+      "api": "Application.GET",
+      "missing": "functionalExample passes { auth } to Application.GET; undocumented in section params/configs: [auth]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "auth"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "params",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { raw } to Application.POST; undocumented in section params/configs: [raw]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "raw"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "cross-cutting",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { validate, log, rateLimit, repeatSubmit, flux, raw } to Application.POST; undocumented in section params/configs: [validate, log, rateLimit, repeatSubmit, flux, raw]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "validate",
+        "log",
+        "rateLimit",
+        "repeatSubmit",
+        "flux",
+        "raw"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "application.ts",
+      "page": "applicationConfig",
+      "sectionId": "route-option",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { auth, rateLimit, repeatSubmit, log, validate } to Application.POST; undocumented in section params/configs: [auth]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "auth"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "middleware",
+      "api": "Auth",
+      "signature": "Auth(options?: AuthOptions): RequestHandler",
+      "missing": "has signature with 1 arg(s) [options?: AuthOptions] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "middleware",
+      "api": "Application.registry",
+      "missing": "functionalExample passes { timeout, checkMode, redis, ignore } to Application.registry; undocumented in section params/configs: [timeout, checkMode, redis, ignore]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "timeout",
+        "checkMode",
+        "redis",
+        "ignore"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "middleware",
+      "api": "Auth",
+      "missing": "functionalExample passes { timeout, checkMode, redis, ignore } to Auth; undocumented in section params/configs: [timeout, checkMode, redis, ignore]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "timeout",
+        "checkMode",
+        "redis",
+        "ignore"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "api": "AuthUtil.logout",
+      "signature": "logout(token?: string): Promise<void>",
+      "missing": "has signature with 1 arg(s) [token?: string] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "api": "AuthUtil.login",
+      "missing": "functionalExample passes { username, device } to AuthUtil.login; undocumented in section params/configs: [username, device]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "username",
+        "device"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "api": "AuthUtil.login",
+      "missing": "functionalExample passes { roles, permissions, username, device, timeout } to AuthUtil.login; undocumented in section params/configs: [roles, permissions, username, device, timeout]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "roles",
+        "permissions",
+        "username",
+        "device",
+        "timeout"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "session-read",
+      "api": "AuthUtil.loadSession",
+      "missing": "functionalExample passes { touch } to AuthUtil.loadSession; undocumented in section params/configs: [touch]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "touch"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "rbac",
+      "api": "Application.GET",
+      "missing": "functionalExample passes { auth } to Application.GET; undocumented in section params/configs: [auth]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "auth"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "api": "Redis.configure",
+      "signature": "configure(config?: RedisConfig): void",
+      "missing": "has signature with 1 arg(s) [config?: RedisConfig] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "api": "Redis.connect",
+      "signature": "connect(config?: RedisConfig): Promise<void>",
+      "missing": "has signature with 1 arg(s) [config?: RedisConfig] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "api": "Redis.configure",
+      "missing": "functionalExample passes { host, keyPrefix } to Redis.configure; undocumented in section params/configs: [host, keyPrefix]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "host",
+        "keyPrefix"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-structures",
+      "api": "pipeline",
+      "signature": "pipeline(fn: (multi) => void): Promise<unknown[]>",
+      "missing": "has signature with 1 arg(s) [fn: (multi) => void] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "rate-repeat",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { rateLimit, repeatSubmit } to Application.POST; undocumented in section params/configs: [rateLimit, repeatSubmit]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "rateLimit",
+        "repeatSubmit"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "RLock.lock",
+      "signature": "lock(leaseTimeMs?: number): Promise<void>",
+      "missing": "has signature with 1 arg(s) [leaseTimeMs?: number] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "api": "RLock.tryLock",
+      "signature": "tryLock(waitTimeMs?, leaseTimeMs?): Promise<boolean>",
+      "missing": "has signature with 2 arg(s) [waitTimeMs?, leaseTimeMs?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "id-type",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { idType } to configureOrm; undocumented in section params/configs: [idType]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "idType"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "@Mapper",
+      "signature": "@Mapper(tableOrEntity, idFieldOrOptions?)",
+      "missing": "idFieldOrOptions?",
+      "kind": "signature-params-gap",
+      "paramCount": 2
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectOne",
+      "signature": "selectOne(wrapper?, options?)",
+      "missing": "has signature with 2 arg(s) [wrapper?, options?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectList",
+      "signature": "selectList(wrapper?, options?)",
+      "missing": "has signature with 2 arg(s) [wrapper?, options?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "selectCount",
+      "signature": "selectCount(wrapper?)",
+      "missing": "has signature with 1 arg(s) [wrapper?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { sqlLog, logicDelete } to configureOrm; undocumented in section params/configs: [sqlLog, logicDelete]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "sqlLog",
+        "logicDelete"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "api": "table",
+      "missing": "functionalExample passes { entity, logicDelete, updateNullStrategy } to table; undocumented in section params/configs: [entity, logicDelete, updateNullStrategy]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "entity",
+        "logicDelete",
+        "updateNullStrategy"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "query-wrapper",
+      "api": "构造",
+      "signature": "new QueryWrapper(options?) | QueryWrapper.forDatasource(name)",
+      "missing": "has signature with 1 arg(s) [options?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-search",
+      "api": "@TableSearch",
+      "signature": "@TableSearch(options? | OperType)",
+      "missing": "options? | OperType",
+      "kind": "signature-params-gap",
+      "paramCount": 2
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "auto-fill",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { fillCreateTime, fillUpdateTime, fillCreateBy, fillUpdateBy } to configureOrm; undocumented in section params/configs: [fillCreateTime, fillUpdateTime, fillCreateBy, fillUpdateBy]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "fillCreateTime",
+        "fillUpdateTime",
+        "fillCreateBy",
+        "fillUpdateBy"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "optimistic-lock",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { optimisticLock, versionField } to configureOrm; undocumented in section params/configs: [optimisticLock, versionField]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "optimisticLock",
+        "versionField"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "db",
+      "api": "Db.register",
+      "missing": "functionalExample passes { type, host, database, user, password } to Db.register; undocumented in section params/configs: [type, host, database, user, password]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "type",
+        "host",
+        "database",
+        "user",
+        "password"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "configureOrm",
+      "signature": "configureOrm(patch: Partial<ResolvedOrmConfig>)",
+      "missing": "has signature with 1 arg(s) [patch: Partial<ResolvedOrmConfig>] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "configureOrm",
+      "missing": "functionalExample passes { logicDelete, sqlLog, batchInsertSize } to configureOrm; undocumented in section params/configs: [logicDelete, sqlLog, batchInsertSize]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "logicDelete",
+        "sqlLog",
+        "batchInsertSize"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "api": "configureSqlLog",
+      "missing": "functionalExample passes { enabled, level, parts, format } to configureSqlLog; undocumented in section params/configs: [enabled, level, parts, format]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "enabled",
+        "level",
+        "parts",
+        "format"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "decorators",
+      "api": "@Bean",
+      "signature": "@Bean(token?: BeanToken | { token })",
+      "missing": "has signature with 1 arg(s) [token?: BeanToken | { token }] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "rest.ts",
+      "page": "validateApi",
+      "sectionId": "apis",
+      "api": "@Email / @Phone",
+      "signature": "@Email(message?) / @Phone({ locale?, message? })",
+      "missing": "has signature with 1 arg(s) [message?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "rest.ts",
+      "page": "exceptionApi",
+      "sectionId": "apis",
+      "api": "@ExceptionHandler",
+      "signature": "@ExceptionHandler(errorType?: Function)",
+      "missing": "has signature with 1 arg(s) [errorType?: Function] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    },
+    {
+      "severity": "medium",
+      "file": "rest.ts",
+      "page": "jsonApi",
+      "sectionId": "apis",
+      "api": "ObjectMapper.configure",
+      "missing": "functionalExample passes { dateFormat, include, deep } to ObjectMapper.configure; undocumented in section params/configs: [dateFormat, include, deep]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "dateFormat",
+        "include",
+        "deep"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "rest.ts",
+      "page": "logApi",
+      "sectionId": "apis",
+      "api": "Application.registry",
+      "missing": "functionalExample passes { enabled, writer, excludeParamNames, silent } to Application.registry; undocumented in section params/configs: [enabled, writer, excludeParamNames, silent]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "enabled",
+        "writer",
+        "excludeParamNames",
+        "silent"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "rest.ts",
+      "page": "logApi",
+      "sectionId": "apis",
+      "api": "Log",
+      "missing": "functionalExample passes { enabled, writer, excludeParamNames, silent } to Log; undocumented in section params/configs: [enabled, writer, excludeParamNames, silent]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "enabled",
+        "writer",
+        "excludeParamNames",
+        "silent"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "rest.ts",
+      "page": "logApi",
+      "sectionId": "apis",
+      "api": "Application.POST",
+      "missing": "functionalExample passes { log } to Application.POST; undocumented in section params/configs: [log]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "log"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "rest.ts",
+      "page": "loggerApi",
+      "sectionId": "apis",
+      "api": "Application.registry",
+      "missing": "functionalExample passes { level, pretty } to Application.registry; undocumented in section params/configs: [level, pretty]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "level",
+        "pretty"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "rest.ts",
+      "page": "loggerApi",
+      "sectionId": "apis",
+      "api": "Logger",
+      "missing": "functionalExample passes { level, pretty } to Logger; undocumented in section params/configs: [level, pretty]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "level",
+        "pretty"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "configureSchedule",
+      "missing": "functionalExample passes { loadJobs } to configureSchedule; undocumented in section params/configs: [loadJobs]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "loadJobs"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.scheduleJob",
+      "missing": "functionalExample passes { id, title, cron, beanName, status } to ScheduleManager.scheduleJob; undocumented in section params/configs: [id, title, cron, beanName, status]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "id",
+        "title",
+        "cron",
+        "beanName",
+        "status"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "api": "ScheduleManager.runOnce",
+      "missing": "functionalExample passes { id, cron, beanName } to ScheduleManager.runOnce; undocumented in section params/configs: [id, cron, beanName]",
+      "kind": "functionalExample-options-gap",
+      "keys": [
+        "id",
+        "cron",
+        "beanName"
+      ]
+    },
+    {
+      "severity": "medium",
+      "file": "rest.ts",
+      "page": "utilsApi",
+      "sectionId": "apis",
+      "api": "ResponseData.error",
+      "signature": "error<T>(message?, data?, code?)",
+      "missing": "has signature with 3 arg(s) [message?, data?, code?] but no params",
+      "kind": "signature-params-gap",
+      "paramCount": 0
+    }
+  ],
+  "low": [
+    {
+      "severity": "low",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "rate-repeat",
+      "api": "@RateLimiter",
+      "signature": "@RateLimiter(option?: RateLimitOption)",
+      "missing": "signature has option?: RateLimitOption but params list option fields instead of 'option' wrapper (fields: [time, count, type, mode, key]) — OK-ish if fields complete",
+      "kind": "options-fields-only"
+    },
+    {
+      "severity": "low",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "rate-repeat",
+      "api": "@RepeatSubmit",
+      "signature": "@RepeatSubmit(option?: RepeatSubmitOption)",
+      "missing": "signature has option?: RepeatSubmitOption but params list option fields instead of 'option' wrapper (fields: [interval, message]) — OK-ish if fields complete",
+      "kind": "options-fields-only"
+    },
+    {
+      "severity": "low",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "cache",
+      "api": "@Cacheable",
+      "signature": "@Cacheable(option?: CacheableOption)",
+      "missing": "signature has option?: CacheableOption but params list option fields instead of 'option' wrapper (fields: [key, ttl, keyGenerator]) — OK-ish if fields complete",
+      "kind": "options-fields-only"
+    },
+    {
+      "severity": "low",
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "cache",
+      "api": "@CacheEvict",
+      "signature": "@CacheEvict(option?: CacheEvictOption)",
+      "missing": "signature has option?: CacheEvictOption but params list option fields instead of 'option' wrapper (fields: [key, keyGenerator, allEntries]) — OK-ish if fields complete",
+      "kind": "options-fields-only"
+    },
+    {
+      "severity": "low",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "select-method",
+      "api": "@Select",
+      "signature": "@Select(sql: string, options?: SelectOptions)",
+      "missing": "signature has options?: SelectOptions but params list option fields instead of 'options' wrapper (fields: [sql, options.datasource, options.db]) — OK-ish if fields complete",
+      "kind": "options-fields-only"
+    },
+    {
+      "severity": "low",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "insert-decorator",
+      "api": "@Insert",
+      "signature": "@Insert(sql: string, options?: SqlExecuteOptions)",
+      "missing": "signature has options?: SqlExecuteOptions but params list option fields instead of 'options' wrapper (fields: [sql, options.datasource, options.db]) — OK-ish if fields complete",
+      "kind": "options-fields-only"
+    },
+    {
+      "severity": "low",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "update-decorator",
+      "api": "@Update",
+      "signature": "@Update(sql: string, options?: SqlExecuteOptions)",
+      "missing": "signature has options?: SqlExecuteOptions but params list option fields instead of 'options' wrapper (fields: [sql, options.datasource, options.db]) — OK-ish if fields complete",
+      "kind": "options-fields-only"
+    },
+    {
+      "severity": "low",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "delete-decorator",
+      "api": "@Delete",
+      "signature": "@Delete(sql: string, options?: SqlExecuteOptions)",
+      "missing": "signature has options?: SqlExecuteOptions but params list option fields instead of 'options' wrapper (fields: [sql, options.datasource, options.db]) — OK-ish if fields complete",
+      "kind": "options-fields-only"
+    },
+    {
+      "severity": "low",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "field-select",
+      "api": "@Select（属性）",
+      "signature": "@Select(sql, options?: FieldSelectOptions & SqlExecuteOptions)",
+      "missing": "signature has options?: FieldSelectOptions & SqlExecuteOptions but params list option fields instead of 'options' wrapper (fields: [sql, many, column, depth, eager, datasource / db]) — OK-ish if fields complete",
+      "kind": "options-fields-only"
+    },
+    {
+      "severity": "low",
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "transaction",
+      "api": "@Transactional",
+      "signature": "@Transactional(options?: { datasource?: string; propagation?: TransactionPropagation })",
+      "missing": "signature has options?: { datasource?: string; propagation?: TransactionPropagation } but params list option fields instead of 'options' wrapper (fields: [datasource, propagation]) — OK-ish if fields complete",
+      "kind": "options-fields-only"
+    }
+  ],
+  "configCoverage": [
+    {
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "lifecycle",
+      "title": "启动、预热与进程守卫",
+      "configCount": 0,
+      "apiCount": 8,
+      "hasFE": true,
+      "fePreview": "Application   .registry([Auth({ redis: Redis }), Log({ writer }), Logger()])   ."
+    },
+    {
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "scan-registry",
+      "title": "扫描与中间件",
+      "configCount": 0,
+      "apiCount": 4,
+      "hasFE": true,
+      "fePreview": "Application   .scan([\"src/business\", \"src/modules/report\"])   .registry([express"
+    },
+    {
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "routes",
+      "title": "路由注册",
+      "configCount": 0,
+      "apiCount": 3,
+      "hasFE": true,
+      "fePreview": "Application.POST(\"/api/ping\", async () => ({ ok: true }), {   auth: { ignore: tr"
+    },
+    {
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "auth-decorators",
+      "title": "鉴权装饰器",
+      "configCount": 0,
+      "apiCount": 1,
+      "hasFE": true,
+      "fePreview": "Application.GET(\"/api/admin\", handler, {   auth: { roles: [\"admin\"], roleMode: \""
+    },
+    {
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "params",
+      "title": "@RequestBody / Query / Header / Cookie / Path",
+      "configCount": 0,
+      "apiCount": 6,
+      "hasFE": true,
+      "fePreview": "// 函数式路由通常直接用 (req, res)；需要统一包装时用 Controller + 参数装饰器 Application.POST(\"/api/demo"
+    },
+    {
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "value",
+      "title": "@Value 注入 YAML",
+      "configCount": 0,
+      "apiCount": 1,
+      "hasFE": true,
+      "fePreview": "import { getConfigValue, getConfig } from \"@/framework\";  // getConfigValue(path"
+    },
+    {
+      "file": "application.ts",
+      "page": "applicationApi",
+      "sectionId": "cross-cutting",
+      "title": "横切：校验 / 日志 / 限流 / SSE",
+      "configCount": 0,
+      "apiCount": 4,
+      "hasFE": true,
+      "fePreview": "Application.POST(\"/api/demo\", handler, {   validate: true,   log: { title: \"演示\" "
+    },
+    {
+      "file": "application.ts",
+      "page": "applicationConfig",
+      "sectionId": "server",
+      "title": "关联 server 配置（application.yaml）",
+      "configCount": 2,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "server:   port: 3990   trustProxy: false"
+    },
+    {
+      "file": "application.ts",
+      "page": "applicationConfig",
+      "sectionId": "route-option",
+      "title": "RouteOption 字段",
+      "configCount": 10,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "Application.POST(\"/api/demo\", handler, {   auth: { permissions: [\"sys:demo\"], pe"
+    },
+    {
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "middleware",
+      "title": "Auth 中间件",
+      "configCount": 0,
+      "apiCount": 3,
+      "hasFE": true,
+      "fePreview": "import { Auth, getAuthOptions, matchesIgnore } from \"@/framework\";  Application."
+    },
+    {
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "login-logout",
+      "title": "登录与注销",
+      "configCount": 0,
+      "apiCount": 3,
+      "hasFE": true,
+      "fePreview": "const token = await AuthUtil.login(userId, [\"admin\"], [\"sys:user:list\"], {   use"
+    },
+    {
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "session-read",
+      "title": "会话读取 API",
+      "configCount": 0,
+      "apiCount": 7,
+      "hasFE": true,
+      "fePreview": "const token = AuthUtil.readTokenFromRequest(req); const session = await AuthUtil"
+    },
+    {
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "rbac",
+      "title": "角色与权限",
+      "configCount": 0,
+      "apiCount": 3,
+      "hasFE": true,
+      "fePreview": "await AuthUtil.checkRole(\"admin\"); await AuthUtil.checkPermission(\"sys:user:list"
+    },
+    {
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "token-api",
+      "title": "Token 签发与校验",
+      "configCount": 0,
+      "apiCount": 3,
+      "hasFE": true,
+      "fePreview": "import { generateStyleToken, createAuthToken, verifyAuthToken } from \"@/framewor"
+    },
+    {
+      "file": "auth.ts",
+      "page": "authApi",
+      "sectionId": "errors",
+      "title": "错误类",
+      "configCount": 0,
+      "apiCount": 3,
+      "hasFE": true,
+      "fePreview": "try {   await AuthUtil.checkLogin(); } catch (e) {   if (e instanceof NotLoginEr"
+    },
+    {
+      "file": "auth.ts",
+      "page": "authConfig",
+      "sectionId": "options",
+      "title": "AuthOptions",
+      "configCount": 15,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "Auth({   tokenName: \"satoken\",   tokenPrefix: \"\",   timeout: 30 * 24 * 60 * 60 *"
+    },
+    {
+      "file": "auth.ts",
+      "page": "authConfig",
+      "sectionId": "login-options",
+      "title": "LoginOptions（AuthUtil.login）",
+      "configCount": 4,
+      "apiCount": 0,
+      "hasFE": false,
+      "fePreview": ""
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-lifecycle",
+      "title": "连接生命周期",
+      "configCount": 0,
+      "apiCount": 5,
+      "hasFE": true,
+      "fePreview": "Redis.configure({ host: \"127.0.0.1\", keyPrefix: \"pangza:\" }); await Redis.connec"
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-kv",
+      "title": "KV / JSON / 计数",
+      "configCount": 0,
+      "apiCount": 7,
+      "hasFE": true,
+      "fePreview": "await Redis.setJSON(\"user:1\", { name: \"a\" }, 60); const u = await Redis.getJSON<"
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "client-structures",
+      "title": "Hash / Set / List / ZSet / PubSub / Pipeline",
+      "configCount": 0,
+      "apiCount": 6,
+      "hasFE": true,
+      "fePreview": "await Redis.hSet(\"profile:1\", \"name\", \"zhang\"); await Redis.lPush(\"queue:jobs\", "
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "simple-lock",
+      "title": "简易分布式锁",
+      "configCount": 0,
+      "apiCount": 5,
+      "hasFE": true,
+      "fePreview": "const handle = await Redis.tryLock(\"job:sync\", { ttlMs: 10_000 }); if (handle) {"
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "rate-repeat",
+      "title": "限流与防重",
+      "configCount": 0,
+      "apiCount": 5,
+      "hasFE": true,
+      "fePreview": "Application.POST(\"/api/submit\", handler, {   rateLimit: { time: 10, count: 5, ty"
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "cache",
+      "title": "方法缓存 @Cacheable / @CacheEvict",
+      "configCount": 0,
+      "apiCount": 2,
+      "hasFE": true,
+      "fePreview": "const key = Redis.key(\"cache:user:\" + id); const hit = await Redis.getJSON(key);"
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-lock",
+      "title": "Redisson 锁与同步器",
+      "configCount": 0,
+      "apiCount": 12,
+      "hasFE": true,
+      "fePreview": "const lock = Redisson.getLock(\"order:pay\"); if (await lock.tryLock(3000, 10_000)"
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisApi",
+      "sectionId": "redisson-objects",
+      "title": "Redisson 分布式对象",
+      "configCount": 0,
+      "apiCount": 10,
+      "hasFE": true,
+      "fePreview": "const counter = Redisson.getAtomicLong(\"uv\"); await counter.incrementAndGet();  "
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisConfig",
+      "sectionId": "yaml",
+      "title": "YAML redis（standalone）",
+      "configCount": 10,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "redis:   host: 127.0.0.1   port: 6379   password: \"\"   username: \"\"   db: 0   ke"
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisConfig",
+      "sectionId": "cluster-sentinel-tls",
+      "title": "cluster / sentinel / tls",
+      "configCount": 7,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "redis:   mode: cluster   keyPrefix: \"pangza:\"   cluster:     useReplicas: true  "
+    },
+    {
+      "file": "redis.ts",
+      "page": "redisConfig",
+      "sectionId": "redisson-cfg",
+      "title": "RedissonConfig",
+      "configCount": 2,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "Redisson.configure({ lockWatchdogTimeout: 30_000 }); const client = createRediss"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-name",
+      "title": "@TableName",
+      "configCount": 0,
+      "apiCount": 2,
+      "hasFE": true,
+      "fePreview": "import { getTableName } from \"@/framework\"; console.log(getTableName(User)); // "
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-id",
+      "title": "@TableId",
+      "configCount": 0,
+      "apiCount": 2,
+      "hasFE": true,
+      "fePreview": "import { getEntityIdField, getEntityTableMeta } from \"@/framework\"; getEntityIdF"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-field",
+      "title": "@TableField",
+      "configCount": 0,
+      "apiCount": 2,
+      "hasFE": true,
+      "fePreview": "import { applyEntityFieldFills, getEntityFields } from \"@/framework\"; await appl"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "id-type",
+      "title": "IdType 主键策略",
+      "configCount": 0,
+      "apiCount": 6,
+      "hasFE": true,
+      "fePreview": "configureOrm({ idType: \"ASSIGN_ID\" }); setIdentifierGenerator({   nextId: () => "
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "sql-decorators-overview",
+      "title": "@Select / @Insert / @Update / @Delete 总览",
+      "configCount": 0,
+      "apiCount": 1,
+      "hasFE": true,
+      "fePreview": "// 装饰器已换成执行器，直接调用即可 const rows = await mapper.findByUsername(\"admin\"); const ins"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "select-method",
+      "title": "@Select（方法级）",
+      "configCount": 0,
+      "apiCount": 1,
+      "hasFE": true,
+      "fePreview": "const rows = await mapper.findById(\"1\"); const list = await mapper.findActive(\"a"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "insert-decorator",
+      "title": "@Insert",
+      "configCount": 0,
+      "apiCount": 1,
+      "hasFE": true,
+      "fePreview": "const id = await mapper.addUser(\"zhang\", \"secret\"); // id 为自增或 RETURNING 得到的数值；雪"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "update-decorator",
+      "title": "@Update",
+      "configCount": 0,
+      "apiCount": 1,
+      "hasFE": true,
+      "fePreview": "const n = await mapper.updateStatus(\"1\", 0); // n === 受影响行数"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "delete-decorator",
+      "title": "@Delete",
+      "configCount": 0,
+      "apiCount": 1,
+      "hasFE": true,
+      "fePreview": "await mapper.removeHard(\"1\"); // 逻辑删： await mapper.deleteById(\"1\"); // BaseMappe"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "param-decorator",
+      "title": "@Param 与 #{} / ${}",
+      "configCount": 0,
+      "apiCount": 4,
+      "hasFE": true,
+      "fePreview": "import { parseMybatisSql, buildParamContext } from \"@/framework/ORM\";  const ctx"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "field-select",
+      "title": "@Select（属性级）与水合",
+      "configCount": 0,
+      "apiCount": 4,
+      "hasFE": true,
+      "fePreview": "const rows = await Db.query(\"SELECT * FROM sys_menu WHERE parent_id = ?\", [0]); "
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "relations",
+      "title": "关联 @ManyToOne / @OneToMany / @ManyToMany",
+      "configCount": 0,
+      "apiCount": 5,
+      "hasFE": true,
+      "fePreview": "await mapper.selectList(); // 仅 eager await mapper.selectList(w, { relations: [\""
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "mapper",
+      "title": "@Mapper / table / BaseMapper",
+      "configCount": 0,
+      "apiCount": 15,
+      "hasFE": true,
+      "fePreview": "configureOrm({ sqlLog: true, logicDelete: true });  const mapper = table(\"sys_us"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "query-wrapper",
+      "title": "QueryWrapper",
+      "configCount": 0,
+      "apiCount": 9,
+      "hasFE": true,
+      "fePreview": "const w = new QueryWrapper()   .select(\"id\", \"user_name\", \"status\")   .eq(\"statu"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "table-search",
+      "title": "@TableSearch / getQueryWrapperAndPage",
+      "configCount": 0,
+      "apiCount": 5,
+      "hasFE": true,
+      "fePreview": "const { queryWrapper, page } = getQueryWrapperAndPage(   pageRequest?.form ?? {}"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "transaction",
+      "title": "@Transactional",
+      "configCount": 0,
+      "apiCount": 2,
+      "hasFE": true,
+      "fePreview": "await Db.transaction(async () => {   await mapper.insert(row);   await otherMapp"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "auto-fill",
+      "title": "自动填充（fill / MetaObjectHandler）",
+      "configCount": 0,
+      "apiCount": 2,
+      "hasFE": true,
+      "fePreview": "configureOrm({   fillCreateTime: \"create_time\",   fillUpdateTime: \"update_time\","
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "optimistic-lock",
+      "title": "乐观锁",
+      "configCount": 0,
+      "apiCount": 2,
+      "hasFE": true,
+      "fePreview": "configureOrm({ optimisticLock: true, versionField: \"version\" }); try {   await m"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "db",
+      "title": "Db / DataSource",
+      "configCount": 0,
+      "apiCount": 5,
+      "hasFE": true,
+      "fePreview": "Db.register(\"pg\", {   type: \"postgresql\",   host: \"127.0.0.1\",   database: \"app\""
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "xml",
+      "title": "XML Mapper 入口",
+      "configCount": 0,
+      "apiCount": 4,
+      "hasFE": true,
+      "fePreview": "loadXmlMappers([\"mappers/**/*.xml\"]); ensureXmlMappersLoaded(); const api = xmlM"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "xml-dynamic",
+      "title": "XML 动态 SQL 标签",
+      "configCount": 0,
+      "apiCount": 7,
+      "hasFE": true,
+      "fePreview": "const stmt = getXmlStatement(\"com.pangza.UserMapper\", \"findByRole\"); const { sql"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "security",
+      "title": "SQL 安全辅助函数",
+      "configCount": 0,
+      "apiCount": 4,
+      "hasFE": true,
+      "fePreview": "import { assertIdent, escapeLike, assertSafeLastSql } from \"@/framework/ORM\";  a"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "dialect",
+      "title": "多数据库方言 Dialect",
+      "configCount": 0,
+      "apiCount": 6,
+      "hasFE": true,
+      "fePreview": "import { getDialect } from \"@/framework/ORM\";  const d = getDialect(\"postgresql\""
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormApi",
+      "sectionId": "runtime-api",
+      "title": "运行时配置与 SQL 日志 API",
+      "configCount": 0,
+      "apiCount": 8,
+      "hasFE": true,
+      "fePreview": "configureOrm({   logicDelete: true,   sqlLog: true,   batchInsertSize: 100, }); "
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormConfig",
+      "sectionId": "yaml",
+      "title": "YAML orm",
+      "configCount": 22,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "orm:   logicDelete: true   logicDeleteField: delete_flag   logicDeleteValue: 1  "
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormConfig",
+      "sectionId": "mapper-opts",
+      "title": "MapperTableOptions（表级覆盖）",
+      "configCount": 8,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "@Mapper(MenuRole, { logicDelete: false }) class MenuRoleMapper {}  table(\"sys_us"
+    },
+    {
+      "file": "orm.ts",
+      "page": "ormConfig",
+      "sectionId": "datasource",
+      "title": "数据源 datasource.*",
+      "configCount": 7,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "datasource:   default:     type: mysql     host: 127.0.0.1     port: 3306     us"
+    },
+    {
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "container",
+      "title": "Container",
+      "configCount": 0,
+      "apiCount": 4,
+      "hasFE": true,
+      "fePreview": "Container.bindClass(UserService); const svc = Container.get(UserService);  Conta"
+    },
+    {
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "decorators",
+      "title": "IoC 装饰器",
+      "configCount": 0,
+      "apiCount": 4,
+      "hasFE": true,
+      "fePreview": "Container.bindClass(UserService); // 等价于装饰器自动 bind const path = Container.get(\"u"
+    },
+    {
+      "file": "service.ts",
+      "page": "serviceApi",
+      "sectionId": "mapper-service",
+      "title": "@Mapper / @Service 与委托清单",
+      "configCount": 0,
+      "apiCount": 4,
+      "hasFE": true,
+      "fePreview": "Container.bindClass(UserService); const svc = Container.get(UserService); await "
+    },
+    {
+      "file": "service.ts",
+      "page": "serviceConfig",
+      "sectionId": "notes",
+      "title": "约定",
+      "configCount": 3,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "@Component(\"sysLogCleanTask\") class SysLogCleanTask {   async execute() { /* ..."
+    },
+    {
+      "file": "rest.ts",
+      "page": "validateApi",
+      "sectionId": "apis",
+      "title": "公开 API",
+      "configCount": 0,
+      "apiCount": 8,
+      "hasFE": true,
+      "fePreview": "await validateHandler(body, CreateUserDto); await validateHandler(body, {   user"
+    },
+    {
+      "file": "rest.ts",
+      "page": "validateConfig",
+      "sectionId": "rules",
+      "title": "规则参数与错误结构",
+      "configCount": 6,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "try {   await validateHandler(body, CreateUserDto); } catch (e) {   // e instanc"
+    },
+    {
+      "file": "rest.ts",
+      "page": "exceptionApi",
+      "sectionId": "apis",
+      "title": "公开 API",
+      "configCount": 0,
+      "apiCount": 8,
+      "hasFE": true,
+      "fePreview": "registerHandler(BizException, (e) => ({   code: e.code,   message: e.message,   "
+    },
+    {
+      "file": "rest.ts",
+      "page": "exceptionConfig",
+      "sectionId": "builtin",
+      "title": "内置映射",
+      "configCount": 5,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "// 默认业务错误体（示意） { \"code\": 500, \"message\": \"用户不存在\", \"data\": null }  // ValidationE"
+    },
+    {
+      "file": "rest.ts",
+      "page": "jsonApi",
+      "sectionId": "apis",
+      "title": "公开 API",
+      "configCount": 0,
+      "apiCount": 8,
+      "hasFE": true,
+      "fePreview": "ObjectMapper.configure({   dateFormat: \"yyyy-MM-dd HH:mm:ss\",   include: JsonInc"
+    },
+    {
+      "file": "rest.ts",
+      "page": "jsonConfig",
+      "sectionId": "opts",
+      "title": "选项",
+      "configCount": 5,
+      "apiCount": 0,
+      "hasFE": false,
+      "fePreview": ""
+    },
+    {
+      "file": "rest.ts",
+      "page": "logApi",
+      "sectionId": "apis",
+      "title": "公开 API",
+      "configCount": 0,
+      "apiCount": 9,
+      "hasFE": true,
+      "fePreview": "Application.registry(Log({   enabled: true,   writer: async (row) => { await sys"
+    },
+    {
+      "file": "rest.ts",
+      "page": "logConfig",
+      "sectionId": "module",
+      "title": "LogModuleOptions",
+      "configCount": 4,
+      "apiCount": 0,
+      "hasFE": false,
+      "fePreview": ""
+    },
+    {
+      "file": "rest.ts",
+      "page": "logConfig",
+      "sectionId": "record",
+      "title": "LogRecordOption",
+      "configCount": 5,
+      "apiCount": 0,
+      "hasFE": false,
+      "fePreview": ""
+    },
+    {
+      "file": "rest.ts",
+      "page": "loggerApi",
+      "sectionId": "apis",
+      "title": "公开 API",
+      "configCount": 0,
+      "apiCount": 4,
+      "hasFE": true,
+      "fePreview": "Application.registry(Logger({ level: \"debug\", pretty: true })); const log = getL"
+    },
+    {
+      "file": "rest.ts",
+      "page": "loggerConfig",
+      "sectionId": "opts",
+      "title": "LoggerOptions",
+      "configCount": 8,
+      "apiCount": 0,
+      "hasFE": false,
+      "fePreview": ""
+    },
+    {
+      "file": "rest.ts",
+      "page": "configApi",
+      "sectionId": "apis",
+      "title": "公开导出",
+      "configCount": 0,
+      "apiCount": 10,
+      "hasFE": true,
+      "fePreview": "import {   PORT,   getConfig,   getConfigValue,   configProfile, } from \"@/frame"
+    },
+    {
+      "file": "rest.ts",
+      "page": "configConfig",
+      "sectionId": "profile",
+      "title": "Profile 与加载",
+      "configCount": 4,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "# 环境变量 # PANGZA_PROFILE=production # CONFIG_PATH=./config/prod-extra.yaml  # 或 #"
+    },
+    {
+      "file": "rest.ts",
+      "page": "configConfig",
+      "sectionId": "server",
+      "title": "server",
+      "configCount": 2,
+      "apiCount": 0,
+      "hasFE": false,
+      "fePreview": ""
+    },
+    {
+      "file": "rest.ts",
+      "page": "configConfig",
+      "sectionId": "upload",
+      "title": "upload",
+      "configCount": 2,
+      "apiCount": 0,
+      "hasFE": true,
+      "fePreview": "server:   port: 3990   trustProxy: false upload:   path: upload   urlPrefix: /fi"
+    },
+    {
+      "file": "rest.ts",
+      "page": "scheduleApi",
+      "sectionId": "apis",
+      "title": "公开 API",
+      "configCount": 0,
+      "apiCount": 6,
+      "hasFE": true,
+      "fePreview": "configureSchedule({   loadJobs: async () => scheduleService.listEnabled(), }); a"
+    },
+    {
+      "file": "rest.ts",
+      "page": "scheduleConfig",
+      "sectionId": "opts",
+      "title": "选项与实体",
+      "configCount": 6,
+      "apiCount": 0,
+      "hasFE": false,
+      "fePreview": ""
+    },
+    {
+      "file": "rest.ts",
+      "page": "encryptApi",
+      "sectionId": "apis",
+      "title": "公开 API",
+      "configCount": 0,
+      "apiCount": 3,
+      "hasFE": true,
+      "fePreview": "const { sessionId, aesKey } = DynamicAesKeyManager.generateDynamicKey(); const k"
+    },
+    {
+      "file": "rest.ts",
+      "page": "encryptConfig",
+      "sectionId": "notes",
+      "title": "说明",
+      "configCount": 2,
+      "apiCount": 0,
+      "hasFE": false,
+      "fePreview": ""
+    },
+    {
+      "file": "rest.ts",
+      "page": "langchainApi",
+      "sectionId": "status",
+      "title": "现状",
+      "configCount": 0,
+      "apiCount": 1,
+      "hasFE": true,
+      "fePreview": "// 暂无函数式 API"
+    },
+    {
+      "file": "rest.ts",
+      "page": "typesApi",
+      "sectionId": "apis",
+      "title": "公开类型",
+      "configCount": 0,
+      "apiCount": 1,
+      "hasFE": true,
+      "fePreview": "import { ResponseCode } from \"@/framework\"; return ResponseData.error(\"失败\", null"
+    },
+    {
+      "file": "rest.ts",
+      "page": "utilsApi",
+      "sectionId": "apis",
+      "title": "公开 API",
+      "configCount": 0,
+      "apiCount": 6,
+      "hasFE": true,
+      "fePreview": "return ResponseData.success(toPageResult(page)); return ResponseData.error(\"无权限\""
+    }
+  ]
+}

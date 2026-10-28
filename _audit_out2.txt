@@ -1,0 +1,453 @@
+﻿SUMMARY { high: 61, medium: 53, low: 10, okApis: 196, totalApis: 276 }
+
+--- HIGH ---
+
+application.ts #scan-registry | Application.static
+  has signature with 1 arg(s) [url: string | string[]] but no params
+  sig: static static(url: string | string[]): typeof Application
+
+auth.ts #login-logout | AuthUtil.login
+  has signature with 4 arg(s) [loginId, rolesOrOpts?, permissions?, profile?] but no params
+  sig: login(loginId, rolesOrOpts?, permissions?, profile?): Promise<string>
+
+auth.ts #session-read | AuthUtil.loadSession
+  has signature with 2 arg(s) [token, { touch? }] but no params
+  sig: loadSession(token, { touch? }): Promise<AuthSession | null>
+
+auth.ts #rbac | AuthUtil.hasRole / hasPermission
+  has signature with 1 arg(s) [role: string] but no params
+  sig: hasRole(role: string) / hasPermission(permission: string)
+
+auth.ts #rbac | AuthUtil.checkRole / checkPermission
+  has signature with 1 arg(s) [role: string] but no params
+  sig: checkRole(role: string) / checkPermission(permission: string)
+
+auth.ts #token-api | generateStyleToken
+  has signature with 1 arg(s) [style: TokenStyle] but no params
+  sig: generateStyleToken(style: TokenStyle): string
+
+auth.ts #token-api | createAuthToken
+  has signature with 2 arg(s) [options, payload] but no params
+  sig: createAuthToken(options, payload): Promise<string>
+
+auth.ts #token-api | verifyAuthToken
+  has signature with 2 arg(s) [options, token] but no params
+  sig: verifyAuthToken(options, token): boolean
+
+redis.ts #client-lifecycle | Redis.key
+  has signature with 1 arg(s) [raw: string] but no params
+  sig: key(raw: string): string
+
+redis.ts #client-kv | set / get / del / exists
+  has signature with 3 arg(s) [key, value, ttlSeconds?] but no params
+  sig: set(key, value, ttlSeconds?) / get(key) / del(...keys) / exists(key)
+
+redis.ts #client-kv | setJSON / getJSON
+  has signature with 3 arg(s) [key, value, ttlSeconds?] but no params
+  sig: setJSON(key, value, ttlSeconds?) / getJSON<T>(key)
+
+redis.ts #client-kv | setPx / setJSONPx
+  has signature with 3 arg(s) [key, value, ttlMs] but no params
+  sig: setPx(key, value, ttlMs) / setJSONPx(key, value, ttlMs)
+
+redis.ts #client-kv | deleteByPrefix
+  has signature with 1 arg(s) [prefix: string] but no params
+  sig: deleteByPrefix(prefix: string): Promise<number>
+
+redis.ts #simple-lock | tryLock
+  key
+  sig: tryLock(key, option?: TryLockOption): Promise<LockHandle | null>
+
+redis.ts #simple-lock | withLock
+  key; fn
+  sig: withLock(key, fn, option?: WithLockOption): Promise<T>
+
+redis.ts #simple-lock | rateLimit / rateLimitSliding
+  has signature with 3 arg(s) [key, windowSec, count] but no params
+  sig: rateLimit(key, windowSec, count) / rateLimitSliding(key, windowMs, count)
+
+redis.ts #redisson-lock | getLock
+  has signature with 1 arg(s) [name: string] but no params
+  sig: getLock(name: string): RLock
+
+redis.ts #redisson-lock | getMultiLock
+  has signature with 1 arg(s) [...locks: RLock[]] but no params
+  sig: getMultiLock(...locks: RLock[]): RLock
+
+redis.ts #redisson-lock | Redisson.withLock
+  has signature with 3 arg(s) [name, fn, leaseMs?] but no params
+  sig: withLock(name, fn, leaseMs?): Promise<T>
+
+orm.ts #table-name | getTableName
+  has signature with 1 arg(s) [entity: Ctor] but no params
+  sig: getTableName(entity: Ctor): string | undefined
+
+orm.ts #field-select | hydrateFieldSelects
+  has signature with 3 arg(s) [Entity, rows, options?] but no params
+  sig: hydrateFieldSelects(Entity, rows, options?)
+
+orm.ts #mapper | table / useTable / clearTableCache
+  has signature with 2 arg(s) [name, MapperTableOptions?] but no params
+  sig: table(name, MapperTableOptions?)
+
+orm.ts #mapper | selectById
+  has signature with 2 arg(s) [id, options?: SelectQueryOptions] but no params
+  sig: selectById(id, options?: SelectQueryOptions)
+
+orm.ts #mapper | selectPage
+  has signature with 3 arg(s) [page, wrapper?, options?] but no params
+  sig: selectPage(page, wrapper?, options?)
+
+orm.ts #mapper | insert
+  has signature with 1 arg(s) [entity] but no params
+  sig: insert(entity)
+
+orm.ts #mapper | saveBatch
+  has signature with 1 arg(s) [entities] but no params
+  sig: saveBatch(entities)
+
+orm.ts #mapper | saveOrUpdate
+  has signature with 1 arg(s) [entity] but no params
+  sig: saveOrUpdate(entity)
+
+orm.ts #mapper | updateById
+  has signature with 1 arg(s) [entity] but no params
+  sig: updateById(entity)
+
+orm.ts #mapper | update
+  has signature with 2 arg(s) [entity, wrapper] but no params
+  sig: update(entity, wrapper)
+
+orm.ts #mapper | updateBatch
+  has signature with 1 arg(s) [entities] but no params
+  sig: updateBatch(entities)
+
+orm.ts #table-search | getQueryWrapper
+  has signature with 3 arg(s) [form, DtoClass, consumer?] but no params
+  sig: getQueryWrapper(form, DtoClass, consumer?)
+
+orm.ts #table-search | getQueryWrapperAndPage
+  has signature with 5 arg(s) [form, Dto, pageNum?, pageSize?, consumer?] but no params
+  sig: getQueryWrapperAndPage(form, Dto, pageNum?, pageSize?, consumer?)
+
+orm.ts #transaction | Db.transaction / Db.transactionOn
+  has signature with 1 arg(s) [fn] but no params
+  sig: Db.transaction(fn) / Db.transactionOn(name, fn, { propagation? })
+
+orm.ts #auto-fill | setMetaObjectHandler / getMetaObjectHandler
+  has signature with 1 arg(s) [{ insert?, update? }] but no params
+  sig: setMetaObjectHandler({ insert?, update? })
+
+orm.ts #db | Db.register
+  has signature with 2 arg(s) [name, config] but no params
+  sig: Db.register(name, config) | Db.register(config)
+
+orm.ts #db | Db.query / Db.queryOn
+  has signature with 2 arg(s) [sql, params?] but no params
+  sig: Db.query(sql, params?) / Db.queryOn(name, sql, params?)
+
+orm.ts #xml | @MapperXml
+  has signature with 1 arg(s) ["namespace"] but no params
+  sig: @MapperXml("namespace")
+
+orm.ts #security | assertIdent
+  has signature with 1 arg(s) [name: string] but no params
+  sig: assertIdent(name: string): string
+
+orm.ts #security | assertSafeUint
+  has signature with 2 arg(s) [value, label?] but no params
+  sig: assertSafeUint(value, label?): number
+
+orm.ts #security | escapeLike
+  has signature with 1 arg(s) [value: string] but no params
+  sig: escapeLike(value: string): string
+
+orm.ts #security | assertSafeLastSql
+  has signature with 1 arg(s) [sql: string] but no params
+  sig: assertSafeLastSql(sql: string): string
+
+orm.ts #dialect | getDialect
+  has signature with 1 arg(s) ["mysql"|"postgresql"|"sqlserver"|鍒悕] but no params
+  sig: getDialect("mysql"|"postgresql"|"sqlserver"|鍒悕): Dialect
+
+orm.ts #runtime-api | setMetaObjectHandler
+  has signature with 1 arg(s) [{ insert?, update? }] but no params
+  sig: setMetaObjectHandler({ insert?, update? })
+
+orm.ts #runtime-api | configureSqlLog
+  has signature with 1 arg(s) [{ enabled, format?, parts?, level? }] but no params
+  sig: configureSqlLog({ enabled, format?, parts?, level? })
+
+service.ts #container | Container.bindClass
+  has signature with 1 arg(s) [Ctor] but no params
+  sig: bindClass(Ctor): void
+
+service.ts #container | Container.bindAlias
+  has signature with 2 arg(s) [alias: string, Ctor] but no params
+  sig: bindAlias(alias: string, Ctor): void
+
+service.ts #container | Container.get / has
+  has signature with 1 arg(s) [token] but no params
+  sig: get<T>(token): T / has(token): boolean
+
+service.ts #decorators | @Resource
+  has signature with 1 arg(s) [Type | string | symbol] but no params
+  sig: @Resource(Type | string | symbol)
+
+service.ts #decorators | @Inject
+  has signature with 1 arg(s) [Token] but no params
+  sig: @Inject(Token)
+
+service.ts #mapper-service | @Mapper
+  has signature with 2 arg(s) [table | Entity, idField | options?] but no params
+  sig: @Mapper(table | Entity, idField | options?)
+
+service.ts #mapper-service | @Service
+  has signature with 1 arg(s) [MapperClass] but no params
+  sig: @Service(MapperClass)
+
+rest.ts #apis | @Min / @Max
+  has signature with 2 arg(s) [n, message?] but no params
+  sig: @Min(n, message?) / @Max(n, message?)
+
+rest.ts #apis | @Custom
+  has signature with 2 arg(s) [fn, message?] but no params
+  sig: @Custom(fn, message?)
+
+rest.ts #apis | registerHandler
+  has signature with 2 arg(s) [errorType, handler] but no params
+  sig: registerHandler(errorType, handler)
+
+rest.ts #apis | @JsonFormat
+  has signature with 1 arg(s) [{ pattern?, timezone? }] but no params
+  sig: @JsonFormat({ pattern?, timezone? })
+
+rest.ts #apis | @JsonInclude
+  has signature with 1 arg(s) [JsonIncludeType] but no params
+  sig: @JsonInclude(JsonIncludeType)
+
+rest.ts #apis | ScheduleManager.scheduleJob
+  has signature with 1 arg(s) [entity: ScheduleJobEntity] but no params
+  sig: scheduleJob(entity: ScheduleJobEntity): void
+
+rest.ts #apis | ScheduleManager.unschedule
+  has signature with 1 arg(s) [id: string] but no params
+  sig: unschedule(id: string): void
+
+rest.ts #apis | ScheduleManager.runOnce
+  has signature with 1 arg(s) [entity | beanName] but no params
+  sig: runOnce(entity | beanName): Promise<void>
+
+rest.ts #status | AiModel
+  has signature with 1 arg(s) [model: string] but no params
+  sig: AiModel(model: string)
+
+rest.ts #apis | ResponseData.success
+  has signature with 2 arg(s) [data: T, message?: string] but no params
+  sig: success<T>(data: T, message?: string)
+
+--- MEDIUM ---
+
+application.ts #lifecycle | Auth
+  functionalExample passes { redis } to Auth; undocumented in section params/configs: [redis]
+
+application.ts #lifecycle | Log
+  functionalExample passes { writer } to Log; undocumented in section params/configs: [writer]
+
+application.ts #scan-registry | Auth
+  functionalExample passes { redis } to Auth; undocumented in section params/configs: [redis]
+
+application.ts #routes | @GetMapping / @PostMapping / @PutMapping / @DeleteMapping
+  has signature with 2 arg(s) [path?: string, option?: RouteOption] but no params
+
+application.ts #routes | Application.POST
+  functionalExample passes { ok } to Application.POST; undocumented in section params/configs: [ok]
+
+application.ts #routes | Application.POST
+  functionalExample passes { auth, log } to Application.POST; undocumented in section params/configs: [auth, log]
+
+application.ts #auth-decorators | Application.GET
+  functionalExample passes { auth } to Application.GET; undocumented in section params/configs: [auth]
+
+application.ts #params | Application.POST
+  functionalExample passes { raw } to Application.POST; undocumented in section params/configs: [raw]
+
+application.ts #cross-cutting | Application.POST
+  functionalExample passes { validate, log, rateLimit, repeatSubmit, flux, raw } to Application.POST; undocumented in section params/configs: [validate, log, rateLimit, repeatSubmit, flux, raw]
+
+application.ts #route-option | Application.POST
+  functionalExample passes { auth, rateLimit, repeatSubmit, log, validate } to Application.POST; undocumented in section params/configs: [auth]
+
+auth.ts #middleware | Auth
+  has signature with 1 arg(s) [options?: AuthOptions] but no params
+
+auth.ts #middleware | Application.registry
+  functionalExample passes { timeout, checkMode, redis, ignore } to Application.registry; undocumented in section params/configs: [timeout, checkMode, redis, ignore]
+
+auth.ts #middleware | Auth
+  functionalExample passes { timeout, checkMode, redis, ignore } to Auth; undocumented in section params/configs: [timeout, checkMode, redis, ignore]
+
+auth.ts #login-logout | AuthUtil.logout
+  has signature with 1 arg(s) [token?: string] but no params
+
+auth.ts #login-logout | AuthUtil.login
+  functionalExample passes { username, device } to AuthUtil.login; undocumented in section params/configs: [username, device]
+
+auth.ts #login-logout | AuthUtil.login
+  functionalExample passes { roles, permissions, username, device, timeout } to AuthUtil.login; undocumented in section params/configs: [roles, permissions, username, device, timeout]
+
+auth.ts #session-read | AuthUtil.loadSession
+  functionalExample passes { touch } to AuthUtil.loadSession; undocumented in section params/configs: [touch]
+
+auth.ts #rbac | Application.GET
+  functionalExample passes { auth } to Application.GET; undocumented in section params/configs: [auth]
+
+redis.ts #client-lifecycle | Redis.configure
+  has signature with 1 arg(s) [config?: RedisConfig] but no params
+
+redis.ts #client-lifecycle | Redis.connect
+  has signature with 1 arg(s) [config?: RedisConfig] but no params
+
+redis.ts #client-lifecycle | Redis.configure
+  functionalExample passes { host, keyPrefix } to Redis.configure; undocumented in section params/configs: [host, keyPrefix]
+
+redis.ts #client-structures | pipeline
+  has signature with 1 arg(s) [fn: (multi) => void] but no params
+
+redis.ts #rate-repeat | Application.POST
+  functionalExample passes { rateLimit, repeatSubmit } to Application.POST; undocumented in section params/configs: [rateLimit, repeatSubmit]
+
+redis.ts #redisson-lock | RLock.lock
+  has signature with 1 arg(s) [leaseTimeMs?: number] but no params
+
+redis.ts #redisson-lock | RLock.tryLock
+  has signature with 2 arg(s) [waitTimeMs?, leaseTimeMs?] but no params
+
+orm.ts #id-type | configureOrm
+  functionalExample passes { idType } to configureOrm; undocumented in section params/configs: [idType]
+
+orm.ts #mapper | @Mapper
+  idFieldOrOptions?
+
+orm.ts #mapper | selectOne
+  has signature with 2 arg(s) [wrapper?, options?] but no params
+
+orm.ts #mapper | selectList
+  has signature with 2 arg(s) [wrapper?, options?] but no params
+
+orm.ts #mapper | selectCount
+  has signature with 1 arg(s) [wrapper?] but no params
+
+orm.ts #mapper | configureOrm
+  functionalExample passes { sqlLog, logicDelete } to configureOrm; undocumented in section params/configs: [sqlLog, logicDelete]
+
+orm.ts #mapper | table
+  functionalExample passes { entity, logicDelete, updateNullStrategy } to table; undocumented in section params/configs: [entity, logicDelete, updateNullStrategy]
+
+orm.ts #query-wrapper | 鏋勯€?  has signature with 1 arg(s) [options?] but no params
+
+orm.ts #table-search | @TableSearch
+  options? | OperType
+
+orm.ts #auto-fill | configureOrm
+  functionalExample passes { fillCreateTime, fillUpdateTime, fillCreateBy, fillUpdateBy } to configureOrm; undocumented in section params/configs: [fillCreateTime, fillUpdateTime, fillCreateBy, fillUpdateBy]
+
+orm.ts #optimistic-lock | configureOrm
+  functionalExample passes { optimisticLock, versionField } to configureOrm; undocumented in section params/configs: [optimisticLock, versionField]
+
+orm.ts #db | Db.register
+  functionalExample passes { type, host, database, user, password } to Db.register; undocumented in section params/configs: [type, host, database, user, password]
+
+orm.ts #runtime-api | configureOrm
+  has signature with 1 arg(s) [patch: Partial<ResolvedOrmConfig>] but no params
+
+orm.ts #runtime-api | configureOrm
+  functionalExample passes { logicDelete, sqlLog, batchInsertSize } to configureOrm; undocumented in section params/configs: [logicDelete, sqlLog, batchInsertSize]
+
+orm.ts #runtime-api | configureSqlLog
+  functionalExample passes { enabled, level, parts, format } to configureSqlLog; undocumented in section params/configs: [enabled, level, parts, format]
+
+service.ts #decorators | @Bean
+  has signature with 1 arg(s) [token?: BeanToken | { token }] but no params
+
+rest.ts #apis | @Email / @Phone
+  has signature with 1 arg(s) [message?] but no params
+
+rest.ts #apis | @ExceptionHandler
+  has signature with 1 arg(s) [errorType?: Function] but no params
+
+rest.ts #apis | ObjectMapper.configure
+  functionalExample passes { dateFormat, include, deep } to ObjectMapper.configure; undocumented in section params/configs: [dateFormat, include, deep]
+
+rest.ts #apis | Application.registry
+  functionalExample passes { enabled, writer, excludeParamNames, silent } to Application.registry; undocumented in section params/configs: [enabled, writer, excludeParamNames, silent]
+
+rest.ts #apis | Log
+  functionalExample passes { enabled, writer, excludeParamNames, silent } to Log; undocumented in section params/configs: [enabled, writer, excludeParamNames, silent]
+
+rest.ts #apis | Application.POST
+  functionalExample passes { log } to Application.POST; undocumented in section params/configs: [log]
+
+rest.ts #apis | Application.registry
+  functionalExample passes { level, pretty } to Application.registry; undocumented in section params/configs: [level, pretty]
+
+rest.ts #apis | Logger
+  functionalExample passes { level, pretty } to Logger; undocumented in section params/configs: [level, pretty]
+
+rest.ts #apis | configureSchedule
+  functionalExample passes { loadJobs } to configureSchedule; undocumented in section params/configs: [loadJobs]
+
+rest.ts #apis | ScheduleManager.scheduleJob
+  functionalExample passes { id, title, cron, beanName, status } to ScheduleManager.scheduleJob; undocumented in section params/configs: [id, title, cron, beanName, status]
+
+rest.ts #apis | ScheduleManager.runOnce
+  functionalExample passes { id, cron, beanName } to ScheduleManager.runOnce; undocumented in section params/configs: [id, cron, beanName]
+
+rest.ts #apis | ResponseData.error
+  has signature with 3 arg(s) [message?, data?, code?] but no params
+
+--- LOW (options fields only) sample ---
+redis.ts #rate-repeat | @RateLimiter: signature has option?: RateLimitOption but params list option fields instead of 'option' wrapper (fi
+redis.ts #rate-repeat | @RepeatSubmit: signature has option?: RepeatSubmitOption but params list option fields instead of 'option' wrapper 
+redis.ts #cache | @Cacheable: signature has option?: CacheableOption but params list option fields instead of 'option' wrapper (fi
+redis.ts #cache | @CacheEvict: signature has option?: CacheEvictOption but params list option fields instead of 'option' wrapper (f
+orm.ts #select-method | @Select: signature has options?: SelectOptions but params list option fields instead of 'options' wrapper (fi
+orm.ts #insert-decorator | @Insert: signature has options?: SqlExecuteOptions but params list option fields instead of 'options' wrapper
+orm.ts #update-decorator | @Update: signature has options?: SqlExecuteOptions but params list option fields instead of 'options' wrapper
+orm.ts #delete-decorator | @Delete: signature has options?: SqlExecuteOptions but params list option fields instead of 'options' wrapper
+orm.ts #field-select | @Select锛堝睘鎬э級: signature has options?: FieldSelectOptions & SqlExecuteOptions but params list option fields instead
+orm.ts #transaction | @Transactional: signature has options?: { datasource?: string; propagation?: TransactionPropagation } but params lis
+
+--- OK ---
+application.ts::applicationApi: 25/27
+application.ts::applicationConfig: 0/0
+auth.ts::authApi: 13/22
+auth.ts::authConfig: 0/0
+redis.ts::redisApi: 36/52
+redis.ts::redisConfig: 0/0
+orm.ts::ormApi: 67/99
+orm.ts::ormConfig: 0/0
+service.ts::serviceApi: 4/12
+service.ts::serviceConfig: 0/0
+rest.ts::validateApi: 5/8
+rest.ts::validateConfig: 0/0
+rest.ts::exceptionApi: 6/8
+rest.ts::exceptionConfig: 0/0
+rest.ts::jsonApi: 6/8
+rest.ts::jsonConfig: 0/0
+rest.ts::logApi: 9/9
+rest.ts::logConfig: 0/0
+rest.ts::loggerApi: 4/4
+rest.ts::loggerConfig: 0/0
+rest.ts::configApi: 10/10
+rest.ts::configConfig: 0/0
+rest.ts::scheduleApi: 3/6
+rest.ts::scheduleConfig: 0/0
+rest.ts::encryptApi: 3/3
+rest.ts::encryptConfig: 0/0
+rest.ts::langchainApi: 0/1
+rest.ts::langchainConfig: 0/0
+rest.ts::typesApi: 1/1
+rest.ts::typesConfig: 0/0
+rest.ts::utilsApi: 4/6
+rest.ts::utilsConfig: 0/0
