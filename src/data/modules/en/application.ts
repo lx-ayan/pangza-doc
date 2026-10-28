@@ -12,13 +12,13 @@ export const applicationApi: DocPage = {
   key: "Application-api",
   title: "Application Â· API",
   description:
-    "Express application facade (@pangza/core): scans business modules, registers routes, and runs auth / rate-limit / validation / logging pipelines with a unified response wrapper. IoC (Container / @Service, â€? also lives under Application in this package. Typical: Application.registry(...).scan(...).start().",
+    "Express application facade (@pangza/core): scans business modules, registers routes, and runs auth / rate-limit / validation / logging pipelines with a unified response wrapper. IoC (Container / @Service, â€¦) also lives under Application in this package. Typical: Application.registry(...).scan(...).start().",
   sections: [
     {
       id: "overview",
       title: "Overview",
       content:
-        "Controller decorators call registerController automatically when the class loads. The start() pipeline: installProcessErrorGuards â†?loadControllers â†?mountFilters â†?routes â†?listen â†?warmupConnections + runApplicationInits. On shutdown, SIGINT/SIGTERM run ApplicationDestroys in reverse order.",
+        "Controller decorators call registerController automatically when the class loads. The start() pipeline: installProcessErrorGuards â†’ loadControllers â†’ mountFilters â†’ routes â†’ listen â†’ warmupConnections + runApplicationInits. On shutdown, SIGINT/SIGTERM run ApplicationDestroys in reverse order.",
     },
     {
       id: "lifecycle",
@@ -102,7 +102,7 @@ export const applicationApi: DocPage = {
         {
           name: "registerController / getScanRoots / loadControllers",
           description:
-            "Decorator registers controller metadata; get scan roots; load business modules by convention (entity â†?mapper â†?service â†?controller, etc.).",
+            "Decorator registers controller metadata; get scan roots; load business modules by convention (entity â†’ mapper â†’ service â†’ controller, etc.).",
         },
       ],
       decoratorExample: `@Component()
@@ -134,14 +134,14 @@ Application.addResponseInterceptor(async (ctx) => {
   return { code: 0, result: ctx.data };
 });
 
-// start: installProcessErrorGuards â†?loadControllers â†?mountFilters â†?routes
-// listen â†?warmupConnections + runApplicationInits`,
+// start: installProcessErrorGuards â†’ loadControllers â†’ mountFilters â†’ routes
+// listen â†’ warmupConnections + runApplicationInits`,
     },
     {
       id: "filter-interceptor",
       title: "Filter and Interceptor",
       content:
-        "Spring Bootâ€“aligned: Filters wrap outside the router (Dispatcher); HandlerInterceptors run after a handler is mapped.\nPipeline: registry middleware â†?Filter chain â†?route auth/guards â†?preHandle â†?RequestInterceptor â†?Controller â†?postHandle â†?ResponseInterceptor â†?write â†?afterCompletion.\nDecorators register on class load; or use Application.addFilter / addInterceptor.",
+        "Spring Boot-aligned: Filters wrap outside the router (Dispatcher); HandlerInterceptors run after a handler is mapped.\nPipeline: registry middleware â†’ Filter chain â†’ route auth/guards â†’ preHandle â†’ RequestInterceptor â†’ Controller â†’ postHandle â†’ ResponseInterceptor â†’ write â†’ afterCompletion.\nDecorators register on class load; or use Application.addFilter / addInterceptor.",
       apis: [
         {
           name: "@WebFilter",
@@ -186,7 +186,7 @@ class TimingFilter implements Filter {
 @Interceptor({ include: ["/api/**"], exclude: ["/api/pub/**"], order: 0 })
 class LogInterceptor implements HandlerInterceptor {
   preHandle(req: Request, _res: Response, handler: HandlerInfo) {
-    console.log("â†?, handler.controllerName, handler.handlerName);
+    console.log("â†’", handler.controllerName, handler.handlerName);
     return true;
   }
   afterCompletion(_req: Request, _res: Response, _h: HandlerInfo, err?: unknown) {
@@ -325,7 +325,7 @@ async create(dto: CreateDto) { return dto; }`,
           signature:
             "static static(url | urls | map, rootDir?): typeof Application",
           description:
-            "Mount static assets. URL may match the folder name, or map URL â†?disk dir; or use yaml upload.path / upload.urlPrefix with express.static.",
+            "Mount static assets. URL may match the folder name, or map URL â†’ disk dir; or use yaml upload.path / upload.urlPrefix with express.static.",
           params: [
             {
               name: "urlOrMap",
@@ -372,7 +372,7 @@ app.use(UPLOAD_URL_PREFIX, express.static(UPLOAD_PATH));`,
           signature:
             "static GET(path, callback, option?: RouteOption): typeof Application",
           description:
-            "Functional route registration. Third arg option is RouteOption â€?table expands all fields (auth / log / rateLimit / â€?.",
+            "Functional route registration. Third arg option is RouteOption â€” table expands all fields (auth / log / rateLimit / â€¦).",
           params: [
             { name: "path", type: "string", required: true, description: "Route path" },
             {
@@ -408,7 +408,7 @@ app.use(UPLOAD_URL_PREFIX, express.static(UPLOAD_PATH));`,
           name: "@GetMapping / @PostMapping / @PutMapping / @DeleteMapping",
           signature: "@GetMapping(path?: string, option?: RouteOption)",
           description:
-            "Registers an HTTP method and sub-path. option is the same RouteOption as Application.GET â€?fields below.",
+            "Registers an HTTP method and sub-path. option is the same RouteOption as Application.GET â€” fields below.",
           params: [
             {
               name: "path",
@@ -564,7 +564,7 @@ detail(@RequestPath(0) id: string) {}
 
 @GetMapping("/:a/:b")
 pair(@RequestPath() parts: string[]) {
-  // no index + multiple segments â†?array
+  // æ—  index ä¸”å¤šæ®µ â†’ æ•°ç»„
 }`,
       functionalExample: `// Functional routes usually take (req, res); use Controller + param decorators for wrapped injection
 Application.POST("/api/demo", async (req, res) => {
@@ -589,7 +589,7 @@ Application.POST("/api/demo", async (req, res) => {
               type: "string",
               required: true,
               description:
-                "YAML dot path. â‘?server.port â‘?${server.port} â‘?${server.port:3990}. Empty string throws.",
+                "YAML dot path. â‘  server.port â‘¡ ${server.port} â‘¢ ${server.port:3990}. Empty string throws.",
             },
             {
               name: "defaultValue",
@@ -629,7 +629,7 @@ const port = getConfigValue<number>("server.port");
 const host = getConfigValue("redis.host", "127.0.0.1");
 const withPlaceholder = getConfigValue("\${server.port:3990}");
 
-// getConfig() â€?no args â†?whole YAML
+// getConfig() â€” no args â†’ whole YAML
 const root = getConfig();`,
     },
     {
@@ -730,7 +730,7 @@ export const applicationConfig: DocPage = {
       id: "route-option-nested",
       title: "RouteOption nested types",
       content:
-        "option.log â†?LogRecordOption; option.rateLimit â†?RateLimitOption; option.repeatSubmit â†?RepeatSubmitOption.",
+        "option.log â†’ LogRecordOption; option.rateLimit â†’ RateLimitOption; option.repeatSubmit â†’ RepeatSubmitOption.",
       configs: [
         ...typeConfigs(LOG_RECORD_OPTION_FIELDS, "en").map((c) => ({
           ...c,
