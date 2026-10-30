@@ -174,7 +174,7 @@ class AppWarmup implements ApplicationInit, ApplicationDestroy {
   examples: {
     key: "examples",
     title: "使用示例",
-    description: "端到端示例：CRUD + 校验 + 限流。",
+    description: "端到端示例：CRUD、校验、限流、文件上传。",
     sections: [
       {
         id: "crud",
@@ -299,6 +299,67 @@ ai:
       apiKey: sk-xxx
       modelName: agnes-3.0-flash
       baseURL: https://example.com/v1`,
+      },
+      {
+        id: "upload",
+        title: "文件上传",
+        content:
+          "框架不内置 multipart 解析：用 multer（或同类）挂到 Application.registry，再用 @RequestForm 取字段；req.file / req.files 会并入 @RequestForm() 对象。\n配合 application.yaml 的 upload.path / upload.urlPrefix 与 Application.static 可直接对外提供已上传文件。",
+        decoratorExample: `import fs from "fs";
+import multer from "multer";
+import { json, urlencoded } from "express";
+import {
+  Application, Controller, PostMapping, RequestForm,
+  UPLOAD_PATH, UPLOAD_URL_PREFIX,
+} from "@pangza/core";
+
+fs.mkdirSync(UPLOAD_PATH, { recursive: true });
+
+const upload = multer({
+  dest: UPLOAD_PATH,
+  limits: { fileSize: 5 * 1024 * 1024 },
+});
+
+Application
+  .registry(json())
+  .registry(urlencoded({ extended: true }))
+  // 表单字段名 file；多文件用 upload.array("files", 5)
+  .registry(upload.single("file"))
+  .static(UPLOAD_URL_PREFIX, UPLOAD_PATH)
+  .scan(__dirname)
+  .start();
+
+@Controller("/api/file")
+class FileController {
+  @PostMapping("/upload")
+  upload(
+    @RequestForm() form: {
+      title?: string;
+      file?: Express.Multer.File;
+    }
+  ) {
+    if (!form.file) throw new Error("请选择文件");
+    return {
+      title: form.title,
+      url: \`\${UPLOAD_URL_PREFIX}/\${form.file.filename}\`,
+      originalName: form.file.originalname,
+      size: form.file.size,
+    };
+  }
+}`,
+        functionalExample: `# application.yaml
+upload:
+  path: upload
+  urlPrefix: /files
+
+# 依赖
+# npm i multer
+# npm i -D @types/multer
+
+# 调用示例
+# curl -F "title=头像" -F "file=@./avatar.png" \\
+#   http://localhost:3000/api/file/upload
+# 访问：http://localhost:3000/files/<filename>`,
       },
     ],
   },

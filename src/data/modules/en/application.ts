@@ -551,8 +551,18 @@ login(@RequestForm() form: { username: string; password: string }) {
   return form.username;
 }
 
+// multipart: registry(multer().single("file")) first, then fields + file
 @PostMapping("/upload")
-upload(@RequestForm("title") title: string) {}
+upload(
+  @RequestForm() form: { title?: string; file?: Express.Multer.File }
+) {
+  return { title: form.title, name: form.file?.filename };
+}
+
+@PostMapping("/meta")
+meta(@RequestForm("title") title: string) {
+  return { title };
+}
 
 @GetMapping("/search")
 search(@RequestQuery() query: Record<string, unknown>) {

@@ -160,7 +160,7 @@ class AppWarmup implements ApplicationInit, ApplicationDestroy {
   examples: {
     key: "examples",
     title: "Examples",
-    description: "CRUD + validation + rate limit + locks.",
+    description: "CRUD, validation, rate limit, locks, and file upload.",
     sections: [
       {
         id: "crud",
@@ -277,6 +277,67 @@ class ChatController {
     return [this.agnes];
   }
 }`,
+      },
+      {
+        id: "upload",
+        title: "File upload",
+        content:
+          "Pangza does not parse multipart itself: mount multer (or similar) via Application.registry, then read fields with @RequestForm. When present, req.file / req.files are merged into the @RequestForm() object.\nPair upload.path / upload.urlPrefix in application.yaml with Application.static to serve uploaded files.",
+        decoratorExample: `import fs from "fs";
+import multer from "multer";
+import { json, urlencoded } from "express";
+import {
+  Application, Controller, PostMapping, RequestForm,
+  UPLOAD_PATH, UPLOAD_URL_PREFIX,
+} from "@pangza/core";
+
+fs.mkdirSync(UPLOAD_PATH, { recursive: true });
+
+const upload = multer({
+  dest: UPLOAD_PATH,
+  limits: { fileSize: 5 * 1024 * 1024 },
+});
+
+Application
+  .registry(json())
+  .registry(urlencoded({ extended: true }))
+  // form field name "file"; use upload.array("files", 5) for multiple
+  .registry(upload.single("file"))
+  .static(UPLOAD_URL_PREFIX, UPLOAD_PATH)
+  .scan(__dirname)
+  .start();
+
+@Controller("/api/file")
+class FileController {
+  @PostMapping("/upload")
+  upload(
+    @RequestForm() form: {
+      title?: string;
+      file?: Express.Multer.File;
+    }
+  ) {
+    if (!form.file) throw new Error("file required");
+    return {
+      title: form.title,
+      url: \`\${UPLOAD_URL_PREFIX}/\${form.file.filename}\`,
+      originalName: form.file.originalname,
+      size: form.file.size,
+    };
+  }
+}`,
+        functionalExample: `# application.yaml
+upload:
+  path: upload
+  urlPrefix: /files
+
+# deps
+# npm i multer
+# npm i -D @types/multer
+
+# example call
+# curl -F "title=avatar" -F "file=@./avatar.png" \\
+#   http://localhost:3000/api/file/upload
+# serve: http://localhost:3000/files/<filename>`,
       },
     ],
   },
